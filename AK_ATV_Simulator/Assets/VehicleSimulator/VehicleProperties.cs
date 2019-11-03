@@ -17,7 +17,7 @@ public class VehicleProperties : MonoBehaviour
     
     // These are read by the wheels during driving
     public int drive_wheels=4;  // 2 == rear wheel drive.  4 == all wheel drive
-    public float max_motor_torque=80.0f; // N-m of motor torque
+    public float max_motor_torque=120.0f; // N-m of motor torque
     public float cur_motor_power=0.0f;
     public float cur_steer=0.0f;
     
@@ -45,6 +45,9 @@ public class VehicleProperties : MonoBehaviour
     private Vector3[] force_start=new Vector3[nforces*nforce_copies]; // start location in world space (meters)
     private Vector3[] force_vec=new Vector3[nforces*nforce_copies]; // actual force vector (Newtons)
     public float force_scaling=1.0f/1000.0f; // force (N) to onscreen meters
+    
+    // For debugging terrain following
+    public float vehicle_height;
 
     // Start is called before the first frame update
     void Start()
@@ -110,7 +113,7 @@ public class VehicleProperties : MonoBehaviour
         }
         
         
-        /* space-locked ground grid */
+        /* //space-locked ground grid 
         GL.Color(new Color(1.0f,1.0f,1.0f,0.3f));
         float groundsz=50.0f;
         for (float dx=-groundsz;dx<=+groundsz;dx+=1.0f) {
@@ -121,8 +124,9 @@ public class VehicleProperties : MonoBehaviour
             GL.Vertex(new Vector3(-groundsz,0.0f,dz));
             GL.Vertex(new Vector3(+groundsz,0.0f,dz));
         }
+        */
         
-        /* space-locked tics 
+        /* //space-locked tics 
         for (float sx=-10.0f;sx<=+10.0f;sx+=1.0f) 
         for (float sy=0.0f;sy<=+0.4f;sy+=1.0f) 
         {
@@ -158,8 +162,9 @@ public class VehicleProperties : MonoBehaviour
         slow=slow*(1.0f-del)+fast*del;
     }
     
+    // Return this 3D position floating safely over terrain
     Vector3 flat_Y(Vector3 v) {
-        v.y=1.2f;
+        v.y = 1.4f+Terrain.activeTerrain.SampleHeight(v);
         return v;
     }
 
@@ -201,8 +206,9 @@ public class VehicleProperties : MonoBehaviour
         // Reset (after flip)
         if (Input.GetKey("r")) {
             transform.position=flat_Y(transform.position);
-            transform.LookAt(flat_Y(transform.position+transform.forward*100.0f));
+            transform.LookAt(flat_Y(transform.position+transform.forward*10.0f));
+            rb.velocity=Vector3.ClampMagnitude(rb.velocity,5.0f); // limit linear velocity (don't zero it, for ice)
+            rb.angularVelocity=new Vector3(0.0f,0.0f,0.0f);
         }
-        
     }
 }
