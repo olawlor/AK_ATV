@@ -1,13 +1,16 @@
 /*
   Properties of the main vehicle chassis.
-  Added to the main vehicle, to allow each wheel to share state.
+  Added to the main vehicle parent, to allow each wheel to share state.
 */
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VehicleProperties : MonoBehaviour
 {
+    // Controls virtual reality (VR) user interface
+    public bool is_VR=false;
+    
     // These are read by the wheels during setup
     public float max_angular_velocity=100.0f; // rads/sec wheel speed cap (hard limit seems to be like 35 rads/sec, equiv to 24mph)
     public float mass_tire=10.0f; // hung mass of tire and hub
@@ -33,7 +36,9 @@ public class VehicleProperties : MonoBehaviour
     public GameObject follow_camera;
     public Vector3 camera_position;
     private Vector3 next_camera() {
-        return transform.position+(-2.5f*transform.forward)+new Vector3(0.0f,1.0f,0.0f);
+        float back=2.5f, up=1.0f;
+        if (is_VR) { back=0.3f; up=0.0f; }
+        return transform.position+(-back*transform.forward)+new Vector3(0.0f,up,0.0f);
     }
     
     // Debugging force visualization
@@ -153,17 +158,17 @@ public class VehicleProperties : MonoBehaviour
     }
     
     // Blend slow with fast, by del
-    void complementary_filter(float del,ref float slow,float fast)
+    public void complementary_filter(float del,ref float slow,float fast)
     {
         slow=slow*(1.0f-del)+fast*del;
     }
-    void complementary_filter(float del,ref Vector3 slow,Vector3 fast)
+    public void complementary_filter(float del,ref Vector3 slow,Vector3 fast)
     {
         slow=slow*(1.0f-del)+fast*del;
     }
     
     // Return this 3D position floating safely over terrain
-    Vector3 flat_Y(Vector3 v) {
+    public Vector3 flat_Y(Vector3 v) {
         v.y = 1.4f+Terrain.activeTerrain.SampleHeight(v);
         return v;
     }
@@ -172,10 +177,11 @@ public class VehicleProperties : MonoBehaviour
     void FixedUpdate()
     {
         if (follow_camera) {
-            complementary_filter(0.005f,ref camera_position,next_camera());
+            complementary_filter(is_VR?0.1f:0.005f,ref camera_position,next_camera());
             follow_camera.transform.position=camera_position;
-            float look_height=0.5f;
-            follow_camera.transform.LookAt(transform.position+new Vector3(0.0f,look_height,0.0f));
+            Vector3 look_here=transform.position;
+            look_here.y=camera_position.y; // don't tilt head up and down
+            follow_camera.transform.LookAt(look_here);
         }
         
         // Update vehicle center of mass physics
@@ -191,17 +197,6 @@ public class VehicleProperties : MonoBehaviour
         drive=Vector3.Dot(last_velocity,transform.forward);
         mph=drive*2.237f;
         skid=Vector3.Dot(last_velocity,transform.right);
-        
-        // Apply keyboard motor and steering controls
-        float motor=0.0f;
-        if (Input.GetKey ("w")) { motor=+1.0f; }
-        if (Input.GetKey ("s")) { motor=-1.0f; }
-        complementary_filter(0.03f,ref cur_motor_power,motor);
-        
-        float rotate=0.0f;
-        if (Input.GetKey ("a")) { rotate=-1.0f; }
-        if (Input.GetKey ("d")) { rotate=+1.0f; }
-        complementary_filter(0.01f,ref cur_steer,rotate);
         
         // Reset (after flip)
         if (Input.GetKey("r")) {
