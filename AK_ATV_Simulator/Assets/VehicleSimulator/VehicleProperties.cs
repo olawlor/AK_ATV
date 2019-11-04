@@ -19,8 +19,8 @@ public class VehicleProperties : MonoBehaviour
     public float angular_drag_tire=0.001f; // per-tire angular drag
     
     // These are read by the wheels during driving
-    public int drive_wheels=4;  // 2 == rear wheel drive.  4 == all wheel drive
-    public float max_motor_torque=120.0f; // N-m of motor torque
+    public int drive_wheels=2;  // 2 == rear wheel drive.  4 == all wheel drive
+    public float max_motor_torque=300.0f/2; // N-m of motor torque (per wheel)
     public float cur_motor_power=0.0f;
     public float cur_steer=0.0f;
     
@@ -43,7 +43,7 @@ public class VehicleProperties : MonoBehaviour
     
     // Debugging force visualization
     public Material force_material; // force shader (reads vertex colors)
-    private const int nforces=5;
+    private const int nforces=1+4;
     private const int nforce_copies=10; // <- smoother bouncing
     private int force_index=0;
     private Color[]   force_color=new Color[nforces*nforce_copies]; // drawn color

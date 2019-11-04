@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 1737117295}
   - component: {fileID: 1737117294}
   - component: {fileID: 1737117296}
+  - component: {fileID: 1737117299}
   - component: {fileID: 1737117298}
   - component: {fileID: 1737117297}
   m_Layer: 0
@@ -1411,6 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9f8f2fdbca88d5ca98825b6666e2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_VR: 0
   max_angular_velocity: 35
   mass_tire: 8
   mass_engine: 170
@@ -1538,6 +1540,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1737117299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737117292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944389b35f2424948baff113206e9c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicle: {fileID: 0}
 --- !u!1 &2033332057
 GameObject:
   m_ObjectHideFlags: 0

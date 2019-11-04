@@ -71,7 +71,8 @@ public class TireSimulator : MonoBehaviour
                 suspension.currentForce);
         }
         
-        if (vehicle.drive_wheels==4 || steer==0.0f) 
+        // Drive any driving wheels
+        if (vehicle.drive_wheels>=4 || vehicle.cur_motor_power<0.0f || steer==0.0f) 
         {
             // Compute motor torque
             Vector3 t=transform.right.normalized*vehicle.cur_motor_power*vehicle.max_motor_torque;
@@ -81,6 +82,7 @@ public class TireSimulator : MonoBehaviour
             vehicle_rb.AddTorque(-t);
         }
         
+        // Rotate steering parts of suspension
         if (steer!=0.0f) {
             transform.parent.localRotation=Quaternion.Euler(0.0f,vehicle.cur_steer*steer,0.0f);
         }
