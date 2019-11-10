@@ -26,18 +26,19 @@ public class VehicleProperties : MonoBehaviour
     
     // Extracted physical motion of the vehicle
     private Rigidbody rb;
-    private Vector3 last_velocity; // m/s velocity
+    public Vector3 last_velocity; // m/s velocity
     public Vector3 acceleration; // m/s^2 acceleration
+    public float centripital; // sideways acceleration, in gravities
     public float drive; // m/s velocity relative to forward direction
     public float skid; // m/s velocity perpendicular to forward direction
     public float mph; // scalar velocity, in miles/hour
     
     // Follow camera
     public GameObject follow_camera;
-    public Vector3 camera_position;
-    private Vector3 next_camera() {
+    public Vector3 camera_position; // smoothed camera position
+    public Vector3 next_camera() {
         float back=2.5f, up=1.0f;
-        if (is_VR) { back=0.3f; up=0.0f; }
+        if (is_VR) { back=0.0f; up=0.0f; }
         return transform.position+(-back*transform.forward)+new Vector3(0.0f,up,0.0f);
     }
     
@@ -177,16 +178,22 @@ public class VehicleProperties : MonoBehaviour
     void FixedUpdate()
     {
         if (follow_camera) {
-            complementary_filter(is_VR?0.1f:0.005f,ref camera_position,next_camera());
-            follow_camera.transform.position=camera_position;
-            Vector3 look_here=transform.position;
-            look_here.y=camera_position.y; // don't tilt head up and down
+            complementary_filter(is_VR?0.3f:0.02f,ref camera_position,next_camera());
+            Vector3 next_position = camera_position;
+            //if (is_VR) next_position.y=0.0f; // leave the floor as the floor
+            follow_camera.transform.localPosition=next_position;
+            
+            Vector3 look_here=next_position+3.0f*transform.forward;
+            if (is_VR) {
+                look_here.y=camera_position.y; // never tilt head up and down
+            } 
             follow_camera.transform.LookAt(look_here);
         }
         
         // Update vehicle center of mass physics
         float dt=Time.fixedDeltaTime;
         acceleration = (rb.velocity - last_velocity)/dt;
+        centripital = Vector3.Dot(acceleration,transform.right)/9.81f;
         last_velocity = rb.velocity;
 
         // A = v^2/r
