@@ -47,6 +47,7 @@
   <ItemGroup>     <Compile Include="Assets\DemoTools\CameraController.cs" />
      <Compile Include="Assets\DemoTools\WorldAxis.cs" />
      <Compile Include="Assets\MainMenu.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\VehicleSimulator\ControllerKeyboard.cs" />
      <Compile Include="Assets\VehicleSimulator\EngineSounds.cs" />
      <Compile Include="Assets\VehicleSimulator\TireSimulator.cs" />
