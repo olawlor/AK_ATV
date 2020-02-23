@@ -15,10 +15,10 @@ public class CameraController : MonoBehaviour
     // Adapted from: http://3dcognition.com/unity-flight-simulator-phase-2/
     //   and http://wiki.unity3d.com/index.php/SmoothMouseLook
     
-    float altitude = transform.position.magnitude;
+    // float altitude = transform.position.magnitude;
     
     float rotateSpeed = 30.0f; // degrees/second
-    float speed = 1.0f * (altitude-0.99f); // WASD movement, earth radius/second
+    float speed = 1.0f; // * (altitude-0.99f); // WASD movement, earth radius/second
     float mouseSpeed=140.0f; // degrees rotation per pixel of mouse movement / second
     
     float transAmount = speed * Time.deltaTime;
