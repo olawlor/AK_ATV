@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu.unity
     guid: 6aeb0a7a237734db09ffd5e5e377437e
-  - enabled: 1
+  - enabled: 0
     path: Assets/AK_ATV_Simulator.unity
     guid: 4f1b7723dd346445fad9128f16a0028a
+  - enabled: 1
+    path: Assets/Scenes/procedural_terrain.unity
+    guid: c6a4b5046117e7c46a1c5db3b148a8ce
   m_configObjects: {}
