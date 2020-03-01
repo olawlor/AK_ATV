@@ -621,6 +621,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -641,10 +642,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 9327f844-8447-4b3d-9923-a555b22723f3
+  cloudProjectId: 5b6e57f9-a6a8-49fb-8aae-7d4c920da853
   framebufferDepthMemorylessMode: 0
-  projectName: Robot Simulation In Unity
-  organizationId: oslawlor
+  projectName: Vehicle Simulation In Unity
+  organizationId: chrismcclure2010
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
