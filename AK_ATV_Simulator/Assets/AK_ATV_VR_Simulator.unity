@@ -276,7 +276,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -830,7 +830,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ed9f0d772f64adf45a66ebcc77db2201,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.318
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ed9f0d772f64adf45a66ebcc77db2201,
         type: 3}
@@ -1536,12 +1536,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0cc929cef13c73deebff66f0d03ad044,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.576
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0cc929cef13c73deebff66f0d03ad044,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.723
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0cc929cef13c73deebff66f0d03ad044,
         type: 3}
@@ -1875,7 +1875,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737117292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56b1db7096ba0de4c85cb84e3262edef, type: 3}
+  m_Script: {fileID: 11500000, guid: adbe068a846996140b53028e0656192f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   VRAreaOffset: {fileID: 463455448}
@@ -1908,6 +1908,8 @@ MonoBehaviour:
   steerQuat: {x: 0, y: 0, z: 0, w: 0}
   steerAxis: {x: 0, y: 0, z: 0}
   steer: 0
+  localHead: {x: 0, y: 0, z: 0}
+  worldHead: {x: 0, y: 0, z: 0}
 --- !u!43 &1828272485
 Mesh:
   m_ObjectHideFlags: 0
