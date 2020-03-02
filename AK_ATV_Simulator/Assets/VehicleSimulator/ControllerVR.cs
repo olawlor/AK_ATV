@@ -121,7 +121,7 @@ public class ControllerVR : MonoBehaviour
             if (Vector3.Angle(Vector3.up, steerAxis) <= 0.0f || Vector3.Angle(Vector3.up, steerAxis) >= 90.0f) angle = -angle;
             steer = Mathf.DeltaAngle(0f, angle);
             vehicle.complementary_filter(0.1f, ref vehicle.cur_steer, steer/45.0f);
-            handlebars.transform.localRotation = Quaternion.AngleAxis(steer, Vector3.up);
+            handlebars.transform.localRotation = Quaternion.Slerp(handlebars.transform.localRotation, Quaternion.AngleAxis(steer, Vector3.up), Time.deltaTime*10);
         }
     }
 }
