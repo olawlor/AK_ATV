@@ -84,7 +84,8 @@ public class TireSimulator : MonoBehaviour
         
         // Rotate steering parts of suspension
         if (steer!=0.0f) {
-            transform.parent.localRotation=Quaternion.Euler(0.0f,vehicle.cur_steer*steer,0.0f);
+            if (!vehicle.is_VR) transform.parent.localRotation=Quaternion.Euler(0.0f,vehicle.cur_steer*steer,0.0f);
+            else transform.parent.localRotation=Quaternion.Euler(Vector3.up * vehicle.cur_steer);
         }
     }
 }
