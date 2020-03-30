@@ -337,6 +337,9 @@
  <Reference Include="UnityEngine.Advertisements.Editor">
  <HintPath>/Users/chrismcclure/Desktop/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Valve.Newtonsoft.Json">
+ <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/chrismcclure/Desktop/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
