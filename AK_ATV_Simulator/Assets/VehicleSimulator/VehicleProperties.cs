@@ -76,7 +76,20 @@ public class VehicleProperties : MonoBehaviour
     void OnDisable() {
         Camera.onPostRender -= draw_stored_lines;
     }
-    
+
+    float atv_angle() {
+        Vector3 atv_up = rb.transform.up;
+        Vector3 world_up = Vector3.up;
+        return Vector3.Angle(atv_up, world_up);
+    }
+    bool is_flipped() {
+        float angle = atv_angle();
+        if (angle >= 90.0f) {
+             return true;
+        }
+        return false;
+    }
+
     // Average across the nforce_copies of idx in this array
     /*
     T force_average<T>(T[] force_arr,int idx) {
