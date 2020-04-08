@@ -44,7 +44,7 @@ public class PauseMenuVR : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu_VR");
     }
 
     public void QuitGame()
