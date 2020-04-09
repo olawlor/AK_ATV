@@ -202,6 +202,10 @@ public class VehicleProperties : MonoBehaviour
             } 
             follow_camera.transform.LookAt(look_here);
         }
+
+        if (is_flipped()) {
+            BroadcastMessage("StartRecord");
+        }
         
         // Update vehicle center of mass physics
         float dt=Time.fixedDeltaTime;
