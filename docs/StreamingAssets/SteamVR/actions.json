@@ -47,7 +47,13 @@
     },
     {
       "name": "/actions/default/in/SnapTurnRight",
-      "type": "boolean"
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/default/in/MenuClick",
+      "type": "boolean",
+      "requirement": "suggested"
     },
     {
       "name": "/actions/default/out/Haptic",
