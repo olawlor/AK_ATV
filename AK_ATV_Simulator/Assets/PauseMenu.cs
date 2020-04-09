@@ -41,4 +41,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting game");
         Application.Quit();
     }
+     public void SetQuality(int qualityIndex){
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }
