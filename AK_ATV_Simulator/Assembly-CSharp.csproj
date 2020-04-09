@@ -46,9 +46,11 @@
   </PropertyGroup>
   <ItemGroup>     <Compile Include="Assets\DemoTools\CameraController.cs" />
      <Compile Include="Assets\DemoTools\WorldAxis.cs" />
+     <Compile Include="Assets\LaserPointerHandler.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\MeshGenerator.cs" />
      <Compile Include="Assets\PauseMenu.cs" />
+     <Compile Include="Assets\PauseMenuVR.cs" />
      <Compile Include="Assets\PointInTime.cs" />
      <Compile Include="Assets\TimeBody.cs" />
      <Compile Include="Assets\VehicleSimulator\ControllerKeyboard.cs" />
@@ -84,67 +86,67 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TerrainTools">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TerrainTools.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -327,22 +329,31 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Valve.Newtonsoft.Json">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/kimki/Documents/code/uni/spring2020/seniorCapstone/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/kim/Documents/code/githubRepos/uni/AK_ATV/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
