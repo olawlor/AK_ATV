@@ -12,21 +12,38 @@ public class PauseMenuVR : MonoBehaviour
 
     public SteamVR_Action_Boolean pauseAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("default", "MenuClick");
     public SteamVR_Input_Sources pauseSource = SteamVR_Input_Sources.RightHand;
+    private bool isPressed = false;
+
+    void Start()
+    {
+        pauseAction.AddOnStateDownListener(ButtonPressed, pauseSource);
+        pauseAction.AddOnStateUpListener(ButtonReleased, pauseSource);
+    }
     // Update is called once per frame
     void Update()
     {
-        if (pauseAction.GetState(pauseSource))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
+        
     }
+
+    public void ButtonPressed(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+    {
+        if (GameIsPaused && !isPressed)
+        {
+            Resume();
+        }
+        else if (!GameIsPaused && !isPressed)
+        {
+            Pause();
+        }
+
+        if (!isPressed) isPressed = true;
+    }
+
+    public void ButtonReleased(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+    {
+        isPressed = false;
+    }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);

@@ -41,6 +41,16 @@ public class VehicleProperties : MonoBehaviour
         if (is_VR) { back=0.0f; up=0.0f; }
         return transform.position+(-back*transform.forward)+new Vector3(0.0f,up,0.0f);
     }
+
+    // Driver properties
+    public GameObject driver;
+    private Rigidbody driver_RB;
+    public Transform head_position;
+    public Transform chassis_position;
+    public Vector3 vehicle_COM; // DEBUG display vehicle center of mass
+    public Vector3 driver_COM; // DEBUG display driver center of mass
+    public Vector3 vehicle_position; // DEBUG display vehicle local position relative to itself
+    public Vector3 driver_position; // DEBUG display driver local position relative to the vehicle
     
     // Debugging force visualization
     public Material force_material; // force shader (reads vertex colors)
@@ -63,7 +73,9 @@ public class VehicleProperties : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.mass=mass_engine;
         mass_vehicle=mass_engine+4.0f*mass_tire;
-        
+
+        driver_RB = driver.GetComponent<Rigidbody>();
+
         // GL rendering (not yet functional)
         Material mat = force_material;
         //Debug.Log("Set up material.");
@@ -204,7 +216,19 @@ public class VehicleProperties : MonoBehaviour
         drive=Vector3.Dot(last_velocity,transform.forward);
         mph=drive*2.237f;
         skid=Vector3.Dot(last_velocity,transform.right);
-        
+
+        driver.transform.position = head_position.position;
+        driver.transform.rotation = head_position.rotation;
+        if (driver.transform.position.x > 0.3f || driver.transform.position.z > 0.3f) {
+            Vector3 driver_force = new Vector3(driver.transform.position.x + chassis_position.position.x, 0, driver.transform.position.z + chassis_position.position.z);
+            rb.AddForce(driver_force);
+        }
+
+        driver_COM = driver_RB.centerOfMass;
+        vehicle_COM = rb.centerOfMass;
+        driver_position = driver.transform.localPosition;
+        vehicle_position = rb.transform.localPosition;
+
         // Reset (after flip)
         if (Input.GetKey("r")) {
             transform.position=flat_Y(transform.position);
