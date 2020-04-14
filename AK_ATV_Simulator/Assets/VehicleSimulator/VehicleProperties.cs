@@ -101,7 +101,20 @@ public class VehicleProperties : MonoBehaviour
     void OnDisable() {
         Camera.onPostRender -= draw_stored_lines;
     }
-    
+
+    float atv_angle() {
+        Vector3 atv_up = rb.transform.up;
+        Vector3 world_up = Vector3.up;
+        return Vector3.Angle(atv_up, world_up);
+    }
+    bool is_flipped() {
+        float angle = atv_angle();
+        if (angle >= 90.0f) {
+             return true;
+        }
+        return false;
+    }
+
     // Average across the nforce_copies of idx in this array
     /*
     T force_average<T>(T[] force_arr,int idx) {
@@ -195,7 +208,8 @@ public class VehicleProperties : MonoBehaviour
     
     // Return this 3D position floating safely over terrain
     public Vector3 flat_Y(Vector3 v) {
-        v.y = 1.4f+Terrain.activeTerrain.SampleHeight(v);
+        v.y = Terrain.activeTerrain.SampleHeight(v) +
+         Terrain.activeTerrain.transform.position.y + 2.0f;
         return v;
     }
 
@@ -213,6 +227,10 @@ public class VehicleProperties : MonoBehaviour
                 look_here.y=camera_position.y; // never tilt head up and down
             } 
             follow_camera.transform.LookAt(look_here);
+        }
+
+        if (is_flipped()) {
+            BroadcastMessage("StartRecord");
         }
         
         // Update vehicle center of mass physics

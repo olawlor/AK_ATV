@@ -6,27 +6,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class EngineSounds : MonoBehaviour
 {
     private float phase=0.0f;
     private float sampling_frequency =48000.0f;
-    // public float volume=0.005f;
-    public float volume = 0.05f;
+    private float volume;
+    private float sliderVol = 0.3f;
     private VehicleProperties vehicle;
-    
+    // public AudioMixer audioMixer;
     void Start() {
         vehicle=gameObject.GetComponent<VehicleProperties>();
         if (!vehicle) Debug.Log("Missing vehicle at audio setup.");
-    }
-
+    }  
     void Update(){
         if(PauseMenu.GameIsPaused){
-            volume = 0f;
+            volume = 0.001f;
         }
         else{
-            volume = 0.05f;
+            volume = sliderVol;
         }
+    }
+
+    public void OnValueChanged(float newVolume){
+        volume = newVolume;
+        sliderVol = newVolume;
+    }
+
+    public void SetVolume(float _volume){
+        volume = _volume;
+        // audioMixer.SetFloat("AtvVolume", volume);
     }
     
     void OnAudioFilterRead(float[] audio,int nchannels) {
@@ -45,8 +56,9 @@ public class EngineSounds : MonoBehaviour
                 
                 v*=volume;
                 
-                for (int c=0;c<nchannels;c++)
+                for (int c=0;c<nchannels;c++){
                     audio[i+c]=v;
+                }
             }
         }        
 }
