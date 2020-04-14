@@ -83,7 +83,7 @@ public class ControllerVR : MonoBehaviour
             }
             
             Vector3 framePos=framePoser.GetLocalPosition(frameSource);
-            Quaternion frameRot=framePoser.GetLocalRotation(frameSource);
+            //Quaternion frameRot=framePoser.GetLocalRotation(frameSource);
             
             if (VRAreaOffset && !setupVRArea && framePos.x!=0.0f) {
                 // Locate VR camera relative to the physical frame:
@@ -97,22 +97,6 @@ public class ControllerVR : MonoBehaviour
             //rollcage.transform.localPosition=framePos+new Vector3(0.0f,-0.5f,-1.0f);
             //rollcage.transform.localRotation=frameRot*Quaternion.Euler(-60.0f,180.0f,0.0f);
             //handlebars.transform.localPosition=framePos+new Vector3(0.0f,-0.2f,-0.10f);
-
-            //Vector3 steerPos=steerPoser.GetLocalPosition(steerSource);
-            //Quaternion steerRot=steerPoser.GetLocalRotation(steerSource);
-            //steerQuat=steerRot*Quaternion.Inverse(frameRot);
-
-            //float angle = 0.0f;
-            //steerQuat.ToAngleAxis(out angle, out steerAxis);
-            //if (Mathf.Abs(steerAxis.y)>0.7f) { // we're in a reasonable steering configuration
-            //    steer=angle;
-            //    if (steerQuat.w>0.0f) steer=-angle;
-            //    if (steer>180.0f) steer-=360.0f; // rotation is around zero
-            //    steer=-steer;
-            //    steer-=30.0f; // baked-in rotation offset (steering trim)
-            //    vehicle.complementary_filter(0.1f,ref vehicle.cur_steer,steer/45.0f);
-            //    handlebars.transform.localRotation=frameRot*Quaternion.Euler(-90.0f,180.0f,0.0f)*Quaternion.Euler(0.0f,steer,0.0f);
-            //}
 
             Vector3 steerPos = steerPoser.GetLocalPosition(steerSource);
             Quaternion steerRot = steerPoser.GetLocalRotation(steerSource);

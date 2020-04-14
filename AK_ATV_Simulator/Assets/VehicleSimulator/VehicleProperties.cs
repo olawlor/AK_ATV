@@ -41,6 +41,28 @@ public class VehicleProperties : MonoBehaviour
         if (is_VR) { back=0.0f; up=0.0f; }
         return transform.position+(-back*transform.forward)+new Vector3(0.0f,up,0.0f);
     }
+
+    // Driver properties
+    public GameObject driver;
+    private Rigidbody driver_RB;
+    public Transform head_position;
+    public Vector3 vehicle_COM; // DEBUG display vehicle center of mass
+    public Vector3 driver_COM; // DEBUG display driver center of mass
+    public Vector3 vehicle_position; // DEBUG display vehicle local position relative to itself
+    private Vector3 driver_position; // DEBUG display driver local position relative to the vehicle
+    private Vector3 driver_velocity;
+    public Vector3 driver_last_position;
+    public Vector3 driver_last_velocity;
+    public Vector3 driver_acceleration;
+    private bool allow_force = false; // WORKAROUND: prevent liftoff during spawn
+
+    IEnumerator WaitForTime(int t)
+    {
+        Debug.Log("Started waiting for " + t + " seconds");
+        yield return new WaitForSeconds(t);
+        Debug.Log("Finished waiting for " + t + "seconds!");
+        allow_force = true;
+    }
     
     // Debugging force visualization
     public Material force_material; // force shader (reads vertex colors)
@@ -63,7 +85,10 @@ public class VehicleProperties : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.mass=mass_engine;
         mass_vehicle=mass_engine+4.0f*mass_tire;
-        
+
+        driver_RB = driver.GetComponent<Rigidbody>();
+        StartCoroutine(WaitForTime(5));
+
         // GL rendering (not yet functional)
         Material mat = force_material;
         //Debug.Log("Set up material.");
@@ -222,7 +247,22 @@ public class VehicleProperties : MonoBehaviour
         drive=Vector3.Dot(last_velocity,transform.forward);
         mph=drive*2.237f;
         skid=Vector3.Dot(last_velocity,transform.right);
-        
+
+        driver.transform.position = head_position.position;
+        driver.transform.rotation = head_position.rotation;
+        driver_velocity = (driver.transform.position - driver_last_position) / dt;
+        driver_acceleration = (driver_RB.velocity - driver_last_velocity) / dt;
+        if (allow_force) rb.AddForce(driver_RB.mass * driver_acceleration);
+
+        //draw_force(Color.blue, driver.transform.position, -driver_acceleration*driver_RB.mass);
+
+        driver_COM = driver_RB.centerOfMass;
+        vehicle_COM = rb.centerOfMass;
+        driver_position = driver.transform.localPosition;
+        vehicle_position = rb.transform.localPosition;
+        driver_last_position = driver.transform.position;
+        driver_last_velocity = driver_velocity; // making our own velocity since the rigidbody isn't updating with respect to the physics engine
+
         // Reset (after flip)
         if (Input.GetKey("r")) {
             transform.position=flat_Y(transform.position);
