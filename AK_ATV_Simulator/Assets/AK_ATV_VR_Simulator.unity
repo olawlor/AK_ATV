@@ -1441,7 +1441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794423888}
   m_LocalRotation: {x: 0, y: -0.94477177, z: 0, w: 0.32772908}
-  m_LocalPosition: {x: 97.805, y: 1.8, z: 105.144}
+  m_LocalPosition: {x: 97.82201, y: 2.099, z: 105.163994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 463455449}
@@ -2399,7 +2399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737117292}
   m_LocalRotation: {x: -0.015551117, y: -0.9439727, z: -0.0407531, w: 0.32712826}
-  m_LocalPosition: {x: 97.74, y: 1.25, z: 105.07}
+  m_LocalPosition: {x: 97.757, y: 1.549, z: 105.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2058428982}
@@ -2473,11 +2473,12 @@ MonoBehaviour:
   camera_position: {x: 0, y: 0, z: 0}
   driver: {fileID: 1844297876}
   head_position: {fileID: 1354502993}
-  chassis_position: {fileID: 2058428982}
   vehicle_COM: {x: 0, y: 0, z: 0}
   driver_COM: {x: 0, y: 0, z: 0}
   vehicle_position: {x: 0, y: 0, z: 0}
-  driver_position: {x: 0, y: 0, z: 0}
+  driver_last_position: {x: 0, y: 0, z: 0}
+  driver_last_velocity: {x: 0, y: 0, z: 0}
+  driver_acceleration: {x: 0, y: 0, z: 0}
   force_material: {fileID: 2100000, guid: 63945d457efb5a618bd8af6a7fbac047, type: 2}
   force_scaling: 0.001
   vehicle_height: 0
@@ -2838,7 +2839,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844297876}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -2866,7 +2867,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844297876}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2913,7 +2914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844297876}
   m_LocalRotation: {x: 0.043598935, y: 0.00030574203, z: -0.0013362803, w: 0.99904823}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.167, z: 0.056}
   m_LocalScale: {x: 0.5000004, y: 0.5000001, z: 0.5000003}
   m_Children: []
   m_Father: {fileID: 1737117293}
