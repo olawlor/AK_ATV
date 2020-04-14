@@ -183,7 +183,8 @@ public class VehicleProperties : MonoBehaviour
     
     // Return this 3D position floating safely over terrain
     public Vector3 flat_Y(Vector3 v) {
-        v.y = 1.4f+Terrain.activeTerrain.SampleHeight(v);
+        v.y = Terrain.activeTerrain.SampleHeight(v) +
+         Terrain.activeTerrain.transform.position.y + 2.0f;
         return v;
     }
 
