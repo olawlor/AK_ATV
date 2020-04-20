@@ -9,6 +9,18 @@ public class CameraController : MonoBehaviour
   {
   }
 
+  void FixedUpdate()
+  {
+    // make sure the camera is above the terrain
+    float min_camera_height = Terrain.activeTerrain.SampleHeight(transform.position)
+      + Terrain.activeTerrain.transform.position.y
+      + 1.5f;
+    float current_camera_height = transform.position.y;
+    if (current_camera_height < min_camera_height)
+    {
+      transform.Translate(0, 0.05f, 0);
+    }
+  }
   // Update is called once per frame
   void Update()
   {

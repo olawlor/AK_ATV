@@ -46,20 +46,22 @@
   </PropertyGroup>
   <ItemGroup>     <Compile Include="Assets\DemoTools\CameraController.cs" />
      <Compile Include="Assets\DemoTools\WorldAxis.cs" />
-     <Compile Include="Assets\LaserPointerHandler.cs" />
-     <Compile Include="Assets\MainMenu.cs" />
-     <Compile Include="Assets\MeshGenerator.cs" />
-     <Compile Include="Assets\PauseMenu.cs" />
-     <Compile Include="Assets\PauseMenuVR.cs" />
-     <Compile Include="Assets\PointInTime.cs" />
      <Compile Include="Assets\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
-     <Compile Include="Assets\SettingsMenu.cs" />
-     <Compile Include="Assets\TimeBody.cs" />
-     <Compile Include="Assets\VehicleSimulator\ControllerKeyboard.cs" />
-     <Compile Include="Assets\VehicleSimulator\ControllerVR.cs" />
-     <Compile Include="Assets\VehicleSimulator\EngineSounds.cs" />
-     <Compile Include="Assets\VehicleSimulator\TireSimulator.cs" />
-     <Compile Include="Assets\VehicleSimulator\VehicleProperties.cs" />
+     <Compile Include="Assets\Scripts\ControllerKeyboard.cs" />
+     <Compile Include="Assets\Scripts\ControllerVR.cs" />
+     <Compile Include="Assets\Scripts\EngineSounds.cs" />
+     <Compile Include="Assets\Scripts\LaserPointerHandler.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MainMenu_VR.cs" />
+     <Compile Include="Assets\Scripts\MeshGenerator.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PauseMenuVR.cs" />
+     <Compile Include="Assets\Scripts\PointInTime.cs" />
+     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+     <Compile Include="Assets\Scripts\TimeBody.cs" />
+     <Compile Include="Assets\Scripts\TireSimulator.cs" />
+     <Compile Include="Assets\Scripts\VehicleProperties.cs" />
+     <Compile Include="Assets\Scripts\WaterCollision.cs" />
      <None Include="Assets\Rocks and Boulders 2\Shaders\shader info.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -91,67 +93,67 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TerrainTools">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TerrainTools.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.10f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -334,22 +336,22 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.10f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Valve.Newtonsoft.Json">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/chrismcclure/Desktop/capstone-production/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Users/chrismcclure/Desktop/capstone/capstone-dev/ak_atv/AK_ATV_Simulator/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.10f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
