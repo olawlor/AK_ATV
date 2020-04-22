@@ -2790,11 +2790,11 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 5
   m_TerrainData: {fileID: 15600000, guid: eb58637e630970643a6e3a66042de6d7, type: 2}
-  m_TreeDistance: 70
-  m_TreeBillboardDistance: 19
-  m_TreeCrossFadeLength: 15.2
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 42
+  m_TreeDistance: 52
+  m_TreeBillboardDistance: 16
+  m_TreeCrossFadeLength: 16
+  m_TreeMaximumFullLODCount: 32
+  m_DetailObjectDistance: 32
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1024
@@ -4508,6 +4508,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7374613836243792123, guid: ac6c2ce3bdd483e46b58f7aaec9eeae0,
+        type: 3}
+      propertyPath: driver
+      value: 
+      objectReference: {fileID: 1864606677}
+    - target: {fileID: 7374613836243792123, guid: ac6c2ce3bdd483e46b58f7aaec9eeae0,
+        type: 3}
+      propertyPath: head_position
+      value: 
+      objectReference: {fileID: 1864606682}
     - target: {fileID: 7374613836243792102, guid: ac6c2ce3bdd483e46b58f7aaec9eeae0,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4533,16 +4543,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -78.93201
       objectReference: {fileID: 0}
-    - target: {fileID: 7374613836243792123, guid: ac6c2ce3bdd483e46b58f7aaec9eeae0,
-        type: 3}
-      propertyPath: driver
-      value: 
-      objectReference: {fileID: 1864606677}
-    - target: {fileID: 7374613836243792123, guid: ac6c2ce3bdd483e46b58f7aaec9eeae0,
-        type: 3}
-      propertyPath: head_position
-      value: 
-      objectReference: {fileID: 1864606682}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9c3d22cdfbbcfd4f8d8019ff97a0f2e, type: 3}
 --- !u!1 &1243509428 stripped
