@@ -86,7 +86,7 @@ public class VehicleProperties : MonoBehaviour
         rb.mass=mass_engine;
         mass_vehicle=mass_engine+4.0f*mass_tire;
         driver_RB = driver.GetComponent<Rigidbody>();
-        // StartCoroutine(WaitForTime(5));
+        if (is_VR) StartCoroutine(WaitForTime(5));
 
         // GL rendering (not yet functional)
         Material mat = force_material;
@@ -232,7 +232,7 @@ public class VehicleProperties : MonoBehaviour
             follow_camera.transform.LookAt(look_here);
         }
 
-        if (is_flipped()) {
+        if (is_flipped() && !is_VR) {
             BroadcastMessage("StartRewind");
         }
         

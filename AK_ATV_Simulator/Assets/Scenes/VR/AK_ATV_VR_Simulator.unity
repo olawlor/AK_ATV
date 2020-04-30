@@ -276,7 +276,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.061534e+22, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1440,7 +1440,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794423888}
-  m_LocalRotation: {x: 0, y: -0.94477177, z: 0, w: 0.32772908}
+  m_LocalRotation: {x: -0, y: -0.94477177, z: -0, w: 0.32772908}
   m_LocalPosition: {x: 97.82201, y: 2.099, z: 105.163994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2235,7 +2235,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2399,7 +2399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737117292}
   m_LocalRotation: {x: -0.015551117, y: -0.9439727, z: -0.0407531, w: 0.32712826}
-  m_LocalPosition: {x: 97.757, y: 1.549, z: 105.09}
+  m_LocalPosition: {x: 97.757, y: 1.5489998, z: 105.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2058428982}
@@ -2494,7 +2494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757223380742e74b1ba612c2b210884c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume: 0.02
 --- !u!82 &1737117298
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2603,7 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944389b35f2424948baff113206e9c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicle: {fileID: 0}
+  vehicle: {fileID: 1737117296}
 --- !u!114 &1737117300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,7 +3423,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
