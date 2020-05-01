@@ -251,19 +251,21 @@ public class VehicleProperties : MonoBehaviour
         mph=drive*2.237f;
         skid=Vector3.Dot(last_velocity,transform.right);
 
-        driver.transform.position = head_position.position;
-        driver.transform.rotation = head_position.rotation;
-        driver_velocity = (driver.transform.position - driver_last_position) / dt;
-        driver_acceleration = (driver_RB.velocity - driver_last_velocity) / dt;
-        if (allow_force) rb.AddForce(driver_RB.mass * driver_acceleration);
+        if (is_VR) {
+            driver.transform.position = head_position.position;
+            driver.transform.rotation = head_position.rotation;
+            driver_velocity = (driver.transform.position - driver_last_position) / dt;
+            driver_acceleration = (driver_RB.velocity - driver_last_velocity) / dt;
+            if (allow_force) rb.AddForce(driver_RB.mass * driver_acceleration);
 
-        //draw_force(Color.blue, driver.transform.position, -driver_acceleration*driver_RB.mass);
+            //draw_force(Color.blue, driver.transform.position, -driver_acceleration*driver_RB.mass);
 
-        driver_COM = driver_RB.centerOfMass;
-        vehicle_COM = rb.centerOfMass;
-        driver_position = driver.transform.localPosition;
-        vehicle_position = rb.transform.localPosition;
-        driver_last_position = driver.transform.position;
-        driver_last_velocity = driver_velocity; // making our own velocity since the rigidbody isn't updating with respect to the physics engine
+            driver_COM = driver_RB.centerOfMass;
+            vehicle_COM = rb.centerOfMass;
+            driver_position = driver.transform.localPosition;
+            vehicle_position = rb.transform.localPosition;
+            driver_last_position = driver.transform.position;
+            driver_last_velocity = driver_velocity; // making our own velocity since the rigidbody isn't updating with respect to the physics engine
+        }
     }
 }

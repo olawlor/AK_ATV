@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ScenarioEndTrigger : MonoBehaviour
 {
+    //public GameObject startTrigger;
+    public string endtext;
+    
     // Start is called before the first frame update
     //void Start()
     //{
@@ -16,11 +19,13 @@ public class ScenarioEndTrigger : MonoBehaviour
 
     //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "ATV")
-        {
-            other.GetComponent<VehicleScenario>().Update_Scenario();
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log("Trigger entered by " + other.gameObject.name);
+        if (other.gameObject.name == "VehicleCoords") {
+            Debug.Log("Ending scenario for " + other.gameObject.name);
+            other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
+            //startTrigger.SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 }
