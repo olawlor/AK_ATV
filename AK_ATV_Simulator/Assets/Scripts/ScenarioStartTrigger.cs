@@ -20,9 +20,9 @@ public class ScenarioStartTrigger : MonoBehaviour
     //}
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Trigger entered by " + other.gameObject.name);
-        if (other.gameObject.name == "VehicleCoords") {
-            Debug.Log("Starting scenario for " + other.gameObject.name);
+        //Debug.Log("Trigger entered by " + other.gameObject.tag);
+        if (other.gameObject.tag == "Player") {
+            Debug.Log("Starting scenario for " + other.gameObject.tag);
             other.GetComponent<VehicleScenario>().Update_Scenario(scenario);
             endTrigger.SetActive(true);
             this.gameObject.SetActive(false);
