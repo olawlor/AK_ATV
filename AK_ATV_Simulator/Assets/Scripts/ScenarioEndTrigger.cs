@@ -20,7 +20,7 @@ public class ScenarioEndTrigger : MonoBehaviour
     //}
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Trigger entered by " + other.gameObject.name);
+        //Debug.Log("Trigger entered by " + other.gameObject.name);
         if (other.gameObject.name == "VehicleCoords") {
             Debug.Log("Ending scenario for " + other.gameObject.name);
             other.GetComponent<VehicleScenario>().Update_Scenario(endtext);

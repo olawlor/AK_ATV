@@ -7,7 +7,7 @@ public class MainMenu_VR : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("AK_ATV_VR_Simulator");
+        SceneManager.LoadScene("procedural_terrain_VR");
     }
 
     public void ExitGame()
