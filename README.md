@@ -1,6 +1,15 @@
 ## WebGL link:
 https://chris-mcclure.github.io/AK_ATV/
 
+### WebGL Keys:
+- p: Pause
+- b: Rewind
+- r: Respawn
+- w: forward
+- a: left
+- s: back
+- d: right
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/SpicyGarlicAlbacoreRoll/AK_ATV/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
