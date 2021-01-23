@@ -1,5 +1,18 @@
+## Alaska ATV Simulator for VR or WebGL
+
+This is a Unity application that simulates an All-Terrain Vehicle (ATV), and is designed to be usable via either VR (SteamVR) or WebGL.
+
+We currently target Unity 2019.2.10f.
+
+For WebGL development, use Unity Scene Assets/Scenes/WebGL/procedural_terrain.scene.
+
+For VR development, use Unity Scene Assets/Scenes/VR/procedural_terrain.scene.
+In VR, we are developing a lightweight portable "flight simulator" with handlebars.
+
+
 ## WebGL link:
-https://chris-mcclure.github.io/AK_ATV/
+This is playable at:
+   https://chris-mcclure.github.io/AK_ATV/
 
 ### WebGL Keys:
 - p: Pause
@@ -10,40 +23,29 @@ https://chris-mcclure.github.io/AK_ATV/
 - s: back
 - d: right
 
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/SpicyGarlicAlbacoreRoll/AK_ATV/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Developer History
+Originally developed by Dr. Orion Lawlor <lawlor@alaska.edu> in 2019-2020.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In Spring 2020 this was massively extended by Kim Fairbanks (graphics), Chris McClure (menus), Curtis Fortenberry (VR), and Jacob Guenther (time rewind).
 
-### Markdown
+Funding has been provided by PacTrans, UTC Grant No:  DTRT13-G-UTC4O. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Unity Assets Included
+For ease of development, these versions of these Unity Assets are included.
+They're from the Unity Asset store:
+- Terrain Tools Sample Asset Pack, by Unity
+        https://assetstore.unity.com/packages/2d/textures-materials/terrain-tools-sample-asset-pack-145808
 
-# Header 1
-## Header 2
-### Header 3
+- Rocks and Boulders 2, by K4
+        https://assetstore.unity.com/packages/3d/props/exterior/rock-and-boulders-2-6947
 
-- Bulleted
-- List
+- Grass Flowers Pack Free, by ALP8310
+        https://assetstore.unity.com/packages/2d/textures-materials/grass-flowers-pack-free-138810
 
-1. Numbered
-2. List
+- SteamVR, by Steam
+        https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
 
-**Bold** and _Italic_ and `Code` text
+They each have their own licenses.
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SpicyGarlicAlbacoreRoll/AK_ATV/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
