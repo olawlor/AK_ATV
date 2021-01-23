@@ -11,7 +11,7 @@ In VR, we are developing a lightweight portable "flight simulator" with handleba
 
 
 ## WebGL link:
-This is playable at:
+The WebGL version is playable at:
    https://chris-mcclure.github.io/AK_ATV/
 
 ### WebGL Keys:
@@ -29,10 +29,11 @@ Originally developed by Dr. Orion Lawlor <lawlor@alaska.edu> in 2019-2020.
 
 In Spring 2020 this was massively extended by Kim Fairbanks (graphics), Chris McClure (menus), Curtis Fortenberry (VR), and Jacob Guenther (time rewind).
 
-Funding has been provided by PacTrans, UTC Grant No:  DTRT13-G-UTC4O. 
+This work has been funded by the US Department of Transportation's Univerity Transportation Center program, Grant #DTRT13-G-UTC4O through the Pacific Northwest Regional University Transportation Center (PacTrans).  
 
+## Download and Development
+This repo takes 1.8GB of network to clone, and 3.8GB of disk space.
 
-## Unity Assets Included
 For ease of development, these versions of these Unity Assets are included.
 They're from the Unity Asset store:
 - Terrain Tools Sample Asset Pack, by Unity
