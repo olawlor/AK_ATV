@@ -1,6 +1,6 @@
 ## Alaska ATV Simulator for VR or WebGL
 
-This is a Unity application that simulates an All-Terrain Vehicle (ATV), and is designed to be usable via either VR (SteamVR) or WebGL. ARGH
+This is a Unity application that simulates an All-Terrain Vehicle (ATV), and is designed to be usable via either VR (SteamVR) or WebGL.
 
 
 ## WebGL link:
