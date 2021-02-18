@@ -17,7 +17,7 @@ The WebGL version is playable at:
 - d: right
 
 ## Developer Guide
-We currently target Unity 2019.4 LTS.
+We currently target Unity 2019.2.10f.
 
 For WebGL development, use Unity Scene Assets/Scenes/WebGL/procedural_terrain.scene.
 
