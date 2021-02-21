@@ -1,6 +1,7 @@
 /*
  Make sound depending on the engine and vehicle speed.
- 
+ audio slider currently is setup to adjust the frequency of the engine sound,
+  however the function that would actually adjust the frequency is commented out
 */
 
 ﻿using System.Collections;
