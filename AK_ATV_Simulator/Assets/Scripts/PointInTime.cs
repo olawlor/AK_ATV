@@ -6,15 +6,15 @@ using UnityEngine;
 public class PointInTime
 {
     /*! \var position
-    * \brief stored the position of the vehice at a particular point in time
+    * \brief stored the position of the vehicle at a particular point in time
     */
    public Vector3 position;
    /*! \var rotation
-    * \brief stored the rotation of the vehice at a particular point in time
+    * \brief stored the rotation of the vehicle at a particular point in time
     */
    public Quaternion rotation;
    /*! \var velocity
-    * \brief stored the velocity of the vehice at a particular point in time
+    * \brief stored the velocity of the vehilce at a particular point in time
     */
    public Vector3 velocity;
     /*! \fn public PointInTime()

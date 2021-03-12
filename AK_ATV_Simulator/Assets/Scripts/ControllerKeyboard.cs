@@ -18,7 +18,7 @@ public class ControllerKeyboard : MonoBehaviour
     }
 
     /*! \fn  void FixedUpdate()
-    * \brief Handles keyboard controlls of the vehicle, and resets the vehicle when it is flipped
+    * \brief Handles keyboard controls of the vehicle, and resets the vehicle when it is flipped
     */
     void FixedUpdate()
     {
