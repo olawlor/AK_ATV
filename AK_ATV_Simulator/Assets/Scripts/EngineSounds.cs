@@ -1,6 +1,7 @@
 /*
  Make sound depending on the engine and vehicle speed.
- 
+ audio slider currently is setup to adjust the frequency of the engine sound,
+  however the function that would actually adjust the frequency is commented out
 */
 
 ﻿using System.Collections;
@@ -16,7 +17,7 @@ public class EngineSounds : MonoBehaviour
     private float volume;
     private float sliderVol = 0.3f;
     private VehicleProperties vehicle;
-    // public AudioMixer audioMixer;
+    /*! \ public AudioMixer audioMixer; */
     void Start() {
         vehicle=gameObject.GetComponent<VehicleProperties>();
         if (!vehicle) Debug.Log("Missing vehicle at audio setup.");
@@ -37,7 +38,7 @@ public class EngineSounds : MonoBehaviour
 
     public void SetVolume(float _volume){
         volume = _volume;
-        // audioMixer.SetFloat("AtvVolume", volume);
+        /*! \ audioMixer.SetFloat("AtvVolume", volume); */
     }
     
     void OnAudioFilterRead(float[] audio,int nchannels) {
@@ -50,7 +51,7 @@ public class EngineSounds : MonoBehaviour
             for (int i=0;i<audio.Length;i+=nchannels) 
             {
                 float v=Mathf.Sin(phase);
-                if (v>0.8f) v=-1.0f; // make it clippier (models explosions)
+                if (v>0.8f) v=-1.0f; /*! \ make it clippier (models explosions) */
                 phase+=increment;
                 if (phase>twopi) phase -= twopi;
                 
