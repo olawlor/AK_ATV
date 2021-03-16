@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*! \file ControllerKeyboard.cs
+* \brief The source for the class ControllerKeyboard
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +9,17 @@ public class ControllerKeyboard : MonoBehaviour
 {
     public VehicleProperties vehicle;
     
-    // Start is called before the first frame update
+    /*! \fn  void Start()
+    * \brief Start is called before the first frame update
+    */
     void Start()
     {
         vehicle=GetComponent<VehicleProperties>();
     }
 
+    /*! \fn  void FixedUpdate()
+    * \brief Handles keyboard controls of the vehicle, and resets the vehicle when it is flipped
+    */
     void FixedUpdate()
     {
         if (vehicle) {
