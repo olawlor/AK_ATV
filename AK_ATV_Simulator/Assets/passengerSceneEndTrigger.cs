@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScenarioEndTrigger : MonoBehaviour
+public class passengerSceneEndTrigger : MonoBehaviour
 {
     public GameObject startTrigger;
     public string endtext;
-    
+    public GameObject passenger;
+    public GameObject secondPassenger;
+    public GameObject mountainPassTrigger;
+
     // Start is called before the first frame update
     //void Start()
     //{
@@ -19,13 +22,19 @@ public class ScenarioEndTrigger : MonoBehaviour
 
     //}
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other)
+    {
         //Debug.Log("Trigger entered by " + other.gameObject.name);
-        if (other.gameObject.name == "VehicleCoords") {
+        if (other.gameObject.name == "VehicleCoords")
+        {
             Debug.Log("Ending scenario for " + other.gameObject.name);
             other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
+            passenger.SetActive(false);
+            secondPassenger.SetActive(false);
             startTrigger.SetActive(true);
+            mountainPassTrigger.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }
 }
+
