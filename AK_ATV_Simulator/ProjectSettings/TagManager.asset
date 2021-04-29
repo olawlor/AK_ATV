@@ -8,6 +8,8 @@ TagManager:
   - FxTemporaire
   - VolumeSlider
   - water
+  - passenger
+  - cage
   layers:
   - Default
   - TransparentFX

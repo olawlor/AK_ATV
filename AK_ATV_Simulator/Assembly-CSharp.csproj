@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>4.9.1.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.18f1</UnityVersion>
@@ -85,6 +85,12 @@
     <Compile Include="Assets\Scripts\VehicleProperties.cs" />
     <Compile Include="Assets\Scripts\VehicleScenario.cs" />
     <Compile Include="Assets\Scripts\WaterCollision.cs" />
+    <Compile Include="Assets\Scripts\followPlayer.cs" />
+    <Compile Include="Assets\passenger2script.cs" />
+    <Compile Include="Assets\passengerSceneEndTrigger.cs" />
+    <Compile Include="Assets\passengerSceneStartTrigger.cs" />
+    <Compile Include="Assets\passengerScript.cs" />
+    <Compile Include="Assets\respawn.cs" />
     <None Include="Assets\TerrainSampleAssets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\VehicleSimulator\VertexColorShader.shader" />
