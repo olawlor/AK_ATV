@@ -12,18 +12,21 @@ public class Timer : MonoBehaviour {
     public float time = 0.0f;
     public bool timing = false;
     public Text timeText;
+    public string finalTime = "";
 
     private void Start(){
         timing = true;
     }
 
     void Update() {
-        if (timing)
-            time += Time.deltaTime;
+        if (timing){
+            time += 1.6f * Time.deltaTime;
+            DisplayTime(time);
+        }
         else {
             Debug.Log("final time: " + time);
-            time = 0.0f;
             timing = false;
+            time = 0.0f;
         }
 
     }
@@ -32,6 +35,7 @@ public class Timer : MonoBehaviour {
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         float milliSeconds = (timeToDisplay % 1) * 1000;
 
-        timeText.text = string.Format("{0:00}:{1:00}.{2:000}", minutes, seconds, milliSeconds);
+        timeText.text = string.Format("{0:00}:{1:00}.{2:00}", minutes, seconds, milliSeconds);
+        finalTime = timeText.text;
     }
 }
