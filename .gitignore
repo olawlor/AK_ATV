@@ -67,3 +67,4 @@ crashlytics-build.properties
 
 # Editor generated folders
 .vscode
+*.resS

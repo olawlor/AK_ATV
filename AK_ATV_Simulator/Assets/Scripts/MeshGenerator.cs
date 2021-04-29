@@ -1,8 +1,13 @@
-﻿using System.Collections;
+﻿/*! \file MeshGenerator.cs
+ *  \brief Contains the mesh generator for the game
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
+//! The class responsible for generating meshes
 public class MeshGenerator : MonoBehaviour
 {
 
@@ -11,7 +16,7 @@ public class MeshGenerator : MonoBehaviour
     int[] triangles;
     public int xSize = 20;
     public int zSize = 20;
-    // Start is called before the first frame update
+    //! Start is called before the first frame update
     void Start()
     {
         mesh = new Mesh();
@@ -21,9 +26,9 @@ public class MeshGenerator : MonoBehaviour
 
     void Update(){
         UpdateMesh();
-
     }
 
+    //! This method defines the triangles and verticies that make up the mesh
     IEnumerator CreateShape(){ 
         vertices = new Vector3[(xSize + 1) * (zSize +1)];
         for(int i = 0, z = 0; z <= zSize; z++){
@@ -52,6 +57,7 @@ public class MeshGenerator : MonoBehaviour
         }
     }
 
+    //! Clears the mesh, then updates the triangles, their verticies, and the associated normals
     void UpdateMesh(){
         mesh.Clear();
         mesh.vertices = vertices;
@@ -59,6 +65,7 @@ public class MeshGenerator : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
+    //! Checks that the verticies are not null, then calls Gizmos.DrawSphere on verticies
     private void onDrawGizmos(){
         if(vertices == null){
             Debug.Log("vertices is null");
