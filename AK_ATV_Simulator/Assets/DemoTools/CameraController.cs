@@ -7,9 +7,10 @@ public class CameraController : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
+        transform.position = new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z);
   }
 
-  void FixedUpdate()
+    void FixedUpdate()
   {
     // make sure the camera is above the terrain
     float min_camera_height = Terrain.activeTerrain.SampleHeight(transform.position)

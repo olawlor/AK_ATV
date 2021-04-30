@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScenarioEndTrigger : MonoBehaviour
 {
-    //public GameObject startTrigger;
+    public GameObject startTrigger;
     public string endtext;
     
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class ScenarioEndTrigger : MonoBehaviour
         if (other.gameObject.name == "VehicleCoords") {
             Debug.Log("Ending scenario for " + other.gameObject.name);
             other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
-            //startTrigger.SetActive(true);
+            startTrigger.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }
