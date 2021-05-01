@@ -33,11 +33,15 @@ public class passengerSceneStartTrigger : MonoBehaviour
         {
             doOnce = true;
             Debug.Log("Starting scenario for " + other.gameObject.tag);
-            other.GetComponent<VehicleScenario>().Update_Scenario(scenario);
             endTrigger.SetActive(true);
             passenger.SetActive(true);
             mountainPassTrigger.SetActive(false);
-            StartCoroutine(StartingScenarios(other));
+            //StartCoroutine(StartingScenarios(other));
+            other.GetComponent<VehicleScenario>().Update_Scenario(scenario);
+                
+            secondPassenger.SetActive(true);
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            secondPassenger.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 }
