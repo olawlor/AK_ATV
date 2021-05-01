@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/* Scenario indicator pointer */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +21,9 @@ public class CubeMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        pos.y += Mathf.Sin(Time.time * speed) * height;
-        transform.position = pos;
+        Vector3 newpos=new Vector3(pos.x,pos.y,pos.z);
+        newpos.y += Mathf.Abs(Mathf.Sin(Time.time * speed)) * height;
+        transform.position = newpos;
     }
 }
+
