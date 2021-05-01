@@ -26,7 +26,7 @@ In VR, we are developing a lightweight portable "flight simulator" with handleba
 
 
 ## Download and Development
-This repo takes 1.8GB of network to clone, and 3.8GB of disk space.
+This repo takes 1.8GB of network to clone, and 5GB of disk space to build.
 
 For ease of development, these versions of these Unity Assets are included.
 They're from the Unity Asset store:
