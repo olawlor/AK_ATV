@@ -17,7 +17,7 @@ The WebGL version is playable at:
 - d: right
 
 ## Developer Guide
-We currently target Unity 2019.2.10f.
+We currently target Unity 2019.4 LTS.
 
 For WebGL development, use Unity Scene Assets/Scenes/WebGL/procedural_terrain.scene.
 
@@ -48,6 +48,8 @@ They each have their own licenses.
 Originally developed by Dr. Orion Lawlor <lawlor@alaska.edu> in 2019-2020.
 
 In Spring 2020 this was massively extended by Kim Fairbanks (graphics), Chris McClure (menus), Curtis Fortenberry (VR), and Jacob Guenther (time rewind).
+
+In Spring 2021 this project was further developed by Dylan Palmieri, Tailon Russell, Greg Talotta, and Ben Talotta. Major additions include documentation with Doxygen, bugfixes, and new scenarios. Greg also worked on adding a script that can spin a chair when the ATV turns, his work is located here: https://github.com/GregTalotta/241_chair_spin
 
 This work has been funded by the US Department of Transportation's Univerity Transportation Center program, Grant #DTRT13-G-UTC4O through the Pacific Northwest Regional University Transportation Center (PacTrans).  
 
