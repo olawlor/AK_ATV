@@ -53,7 +53,7 @@ public class VehicleProperties : MonoBehaviour
     /*!< smoothed camera position. */
     public Vector3 camera_position; 
     public Vector3 next_camera() {
-        float back=2.5f, up=1.0f;
+        float back=3.5f, up=2.0f;
         if (is_VR) { back=0.0f; up=0.0f; }
         return transform.position+(-back*transform.forward)+new Vector3(0.0f,up,0.0f);
     }
@@ -134,7 +134,7 @@ public class VehicleProperties : MonoBehaviour
         Camera.onPostRender -= draw_stored_lines;
     }
 
-    /*! Calculates the angle of the atv */
+    /*! Calculates the tilt angle of the atv, in degrees relative to world up */
     float atv_angle() {
         Vector3 atv_up = rb.transform.up;
         Vector3 world_up = Vector3.up;
@@ -267,9 +267,9 @@ public class VehicleProperties : MonoBehaviour
             complementary_filter(is_VR?0.3f:0.02f,ref camera_position,next_camera());
             Vector3 next_position = camera_position;
             //if (is_VR) next_position.y=0.0f; // leave the floor as the floor
-            follow_camera.transform.localPosition=next_position;
+            follow_camera.transform.position=next_position;
             
-            Vector3 look_here=next_position+3.0f*transform.forward;
+            Vector3 look_here=transform.position + 3.0f*transform.forward;
             if (is_VR) {
                 look_here.y=camera_position.y; // never tilt head up and down
             } 

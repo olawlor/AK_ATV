@@ -35,7 +35,7 @@ public class VehicleScenario : MonoBehaviour
     private void BeginScenario(string msg) {
         scenarioMenu.SetActive(true);
         Time.timeScale = 0f;
-        scenarioAnnounce.text = "! New Scenario:";
+        scenarioAnnounce.text = "New Scenario";
         scenarioDesc.text = msg;
         foreach (GameObject sp in scenarioStartPoints) sp.SetActive(false);
     }
@@ -43,7 +43,7 @@ public class VehicleScenario : MonoBehaviour
     private void EndScenario(string msg) {
         scenarioMenu.SetActive(true);
         Time.timeScale = 0f;
-        scenarioAnnounce.text = "! Info:";
+        scenarioAnnounce.text = "Scenario Complete";
         scenarioDesc.text = msg;
         foreach (GameObject sp in scenarioStartPoints) sp.SetActive(true);
     }
