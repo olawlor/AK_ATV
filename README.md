@@ -19,7 +19,7 @@ The WebGL version is playable at:
 ## Developer Guide
 We currently target Unity 2019.4 LTS.
 
-For WebGL development, use Unity Scene Assets/Scenes/WebGL/procedural_terrain.scene.
+For WebGL development, use Unity Scene Assets/Scenes/WebGL/procedural_terrain.scene.  To build the WebGL version, Window -> Rendering -> Lighting Settings and Generate the lightmap (takes several minutes, depending on your CPU speed).  Then make the HTML and WASM with File -> Build Settings, make sure WebGL/Menu and WebGL/procedural_terrain are in the build, and Build and Run to the "AK_ATV/docs" folder (takes about 10 minutes).
 
 For VR development, use Unity Scene Assets/Scenes/VR/procedural_terrain.scene.
 In VR, we are developing a lightweight portable "flight simulator" with handlebars.
