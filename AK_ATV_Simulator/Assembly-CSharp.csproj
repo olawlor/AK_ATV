@@ -78,11 +78,14 @@
     <Compile Include="Assets\Scripts\PauseMenuVR.cs" />
     <Compile Include="Assets\Scripts\PointInTime.cs" />
     <Compile Include="Assets\Scripts\ScenarioEndTrigger.cs" />
+    <Compile Include="Assets\Scripts\ScenarioEndTriggerHouse.cs" />
     <Compile Include="Assets\Scripts\ScenarioEndTriggerTimer.cs" />
     <Compile Include="Assets\Scripts\ScenarioStartTrigger.cs" />
+    <Compile Include="Assets\Scripts\ScenarioStartTriggerHouseJump.cs" />
     <Compile Include="Assets\Scripts\ScenarioStartTriggerTimer.cs" />
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\TimeBody.cs" />
+    <Compile Include="Assets\Scripts\TimeBodyVehicleCoord.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TireSimulator.cs" />
     <Compile Include="Assets\Scripts\VehicleProperties.cs" />

@@ -1613,7 +1613,6 @@ GameObject:
   - component: {fileID: 238332479}
   - component: {fileID: 238332478}
   - component: {fileID: 238332477}
-  - component: {fileID: 238332480}
   m_Layer: 0
   m_Name: scenario_start_house_jump
   m_TagString: Untagged
@@ -1633,8 +1632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3321b4e3d65eb87409941a9aa5755fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endTrigger: {fileID: 1468106795}
-  scenario: Jump the house, it looks fun!
+  endTrigger: {fileID: 673076284}
+  scenario: jump the house, It will be fun!
 --- !u!65 &238332478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1663,20 +1662,6 @@ Transform:
   m_Father: {fileID: 830603566}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &238332480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238332476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3321b4e3d65eb87409941a9aa5755fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endTrigger: {fileID: 673076284}
-  scenario: 
 --- !u!1 &246658121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,8 +4202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 238332476}
-  endtext: some ideas are better left as ideas. Not jumping the house was the right
-    thing to do
+  endtext: doing stunts with your atv is never a good idea. you should leave the
+    tricks for the professionals
 --- !u!65 &673076287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6836,7 +6821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167931530
@@ -8175,6 +8160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6636616323631406500, guid: 76380f506edb9454389e67982b67a325, type: 3}
+    - {fileID: 825573371, guid: 76380f506edb9454389e67982b67a325, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76380f506edb9454389e67982b67a325, type: 3}
 --- !u!114 &1345926909 stripped
 MonoBehaviour:
@@ -8182,7 +8168,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1345926907}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1390487668}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dfdc52b0cc10324fba937b4cc09ed9e, type: 3}
@@ -8707,6 +8693,25 @@ Transform:
   m_Father: {fileID: 116396835}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180, y: -48.927002, z: 89.99999}
+--- !u!1 &1390487668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6636616322448943260, guid: 76380f506edb9454389e67982b67a325,
+    type: 3}
+  m_PrefabInstance: {fileID: 1345926907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390487672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390487668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71f14c861848df4a87bff5677990f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewindTime: 5
 --- !u!1 &1391298216
 GameObject:
   m_ObjectHideFlags: 0
@@ -9307,26 +9312,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467514818}
   m_Mesh: {fileID: -1457895867955726089, guid: cc208b01f5d147747b9636893ac449fd, type: 3}
---- !u!1 &1468106795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4607524564476164286, guid: fb8d54bcb45708ac09434daad486666d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5535163892285643837}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1468106797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468106795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e20d6b22e358346809141ed35fdae9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTrigger: {fileID: 238332476}
-  endtext: That was a bad idea, you destroyed the house
 --- !u!1 &1481318752
 GameObject:
   m_ObjectHideFlags: 0
@@ -14941,7 +14926,7 @@ PrefabInstance:
     - target: {fileID: 5535163891416539569, guid: fb8d54bcb45708ac09434daad486666d,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb8d54bcb45708ac09434daad486666d, type: 3}
