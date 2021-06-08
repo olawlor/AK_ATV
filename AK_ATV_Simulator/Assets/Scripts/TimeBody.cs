@@ -112,6 +112,7 @@ public class TimeBody : MonoBehaviour
      * Reviewer's note: At this point it seems that StartRewind makes reversing more of a replay than an actual reversing of a vehicle
     */
     public void StartRewind(){
+        BroadcastMessage("DisplayRewind");
         veloBeforeRewind = rb.velocity;
         isRewinding = true;
         rb.isKinematic = true;
@@ -121,7 +122,9 @@ public class TimeBody : MonoBehaviour
      * set the current velocity to what it was before, make false the isRewinding flag, and make the object no longer kinematic
     */
     public void StopRewind(){
-        rb.velocity = veloBeforeRewind;
+        //rb.velocity = veloBeforeRewind;
+        BroadcastMessage("StopDisplayRewind");
+        rb.velocity = Vector3.zero;
         isRewinding = false;
         rb.isKinematic = false;
     }
