@@ -83,7 +83,7 @@ public class ControllerVR : MonoBehaviour
             }
             
             Vector3 framePos=framePoser.GetLocalPosition(frameSource);
-            //Quaternion frameRot=framePoser.GetLocalRotation(frameSource);
+            //Quaternion frameRot=framePoser.GetLocalRotation(frameSource);7
             
             if (VRAreaOffset && !setupVRArea && framePos.x!=0.0f) {
                 // Locate VR camera relative to the physical frame:
