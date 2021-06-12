@@ -79,12 +79,5 @@ public class CameraController : MonoBehaviour
     if (Input.GetKey ("k")) {
       transform.Translate(0, 0, -transAmount);
     }
-    
-    
-    if (Input.GetKey("x") || Input.GetKey("escape"))
-    {
-        Application.Quit();
-    }
-    
   }
 }

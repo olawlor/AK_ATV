@@ -8,7 +8,6 @@ using UnityEngine;
 public class ControllerKeyboard : MonoBehaviour
 {
     public VehicleProperties vehicle;
-    private bool isAirborn;
     /*! \fn  void Start()
     * \brief Start is called before the first frame update
     */
@@ -29,7 +28,7 @@ public class ControllerKeyboard : MonoBehaviour
                 if (Input.GetKey("w")||Input.GetKey("up")) { motor = +3.0f; }
                 if (Input.GetKey("s")||Input.GetKey("down")) { motor = -3.0f; }
                 vehicle.complementary_filter(0.03f, ref vehicle.cur_motor_power, motor);
-                if(!Input.GetKey("w")&&!Input.GetKey("s")&&!Input.GetKey("up")&&!Input.GetKey("down")){vehicle.get_rb().velocity = vehicle.get_rb().velocity * 1000 / 1002;}
+                if(!Input.GetKey("w") && !Input.GetKey("s") && !Input.GetKey("up") && !Input.GetKey("down")){vehicle.get_rb().velocity = vehicle.get_rb().velocity * 1000 / 1003;}
                 if (Input.GetKey("space")) { vehicle.get_rb().velocity = vehicle.get_rb().velocity * 100 / 102;}
                 float rotate = 0.0f;
                 if (Input.GetKey("a")) { rotate = -1.0f; }
