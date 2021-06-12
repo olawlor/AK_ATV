@@ -15,6 +15,7 @@ The WebGL version is playable at:
 - a: left
 - s: back
 - d: right
+- space: brake
 
 ## Developer Guide
 We currently target Unity 2019.4 LTS.
