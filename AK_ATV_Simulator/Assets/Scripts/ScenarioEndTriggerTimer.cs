@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ScenarioEndTriggerTimer : MonoBehaviour
 {
+    public GameObject startTrigger;
+    public GameObject resetRace;
+
     //public GameObject startTrigger;
     public string endtext;
     public GameObject timer;
@@ -25,9 +28,11 @@ public class ScenarioEndTriggerTimer : MonoBehaviour
         //Debug.Log("Trigger entered by " + other.gameObject.name);
         if (other.gameObject.name == "VehicleCoords") {
             string finalTime = timer.GetComponent<Timer>().finalTime;
+            timer.GetComponent<Timer>().BroadcastMessage("ResetTime");
             Debug.Log("Ending scenario for " + other.gameObject.name);
             other.GetComponent<VehicleScenario>().Update_Scenario(endtext + finalTime);
             //startTrigger.SetActive(true);
+            resetRace.SetActive(true);
             this.gameObject.SetActive(false);
             timer.SetActive(false);
         }

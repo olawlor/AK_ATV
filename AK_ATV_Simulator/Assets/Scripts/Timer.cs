@@ -30,6 +30,9 @@ public class Timer : MonoBehaviour {
         }
 
     }
+    void ResetTime(){
+        time = 0.0f;
+    }
     void DisplayTime(float timeToDisplay) {
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);

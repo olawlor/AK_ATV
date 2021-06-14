@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
       rotX += Input.GetAxis("Mouse X") * mouseSpeed * Time.deltaTime;
       rotY -= Input.GetAxis("Mouse Y") * mouseSpeed * Time.deltaTime;
     }
-
+/*
     if (Input.GetKey("up")) {
       rotY+=rotateAmount;	
     }
@@ -79,5 +79,6 @@ public class CameraController : MonoBehaviour
     if (Input.GetKey ("k")) {
       transform.Translate(0, 0, -transAmount);
     }
+    */
   }
 }

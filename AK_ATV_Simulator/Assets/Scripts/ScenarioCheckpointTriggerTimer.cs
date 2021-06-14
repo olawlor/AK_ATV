@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScenarioStartTriggerTimer : MonoBehaviour
+public class ScenarioCheckpointTriggerTimer : MonoBehaviour
 {
-    public GameObject checkpointTrigger;
-    public GameObject timer;
-    public string scenario;
+    public GameObject startTrigger;
+    public GameObject nextTrigger;
 
     // Start is called before the first frame update
     //void Start()
@@ -24,11 +23,9 @@ public class ScenarioStartTriggerTimer : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Trigger entered by " + other.gameObject.tag);
         if (other.gameObject.tag == "Player") {
-            Debug.Log("Starting scenario for " + other.gameObject.tag);
-            other.GetComponent<VehicleScenario>().Update_Scenario(scenario);
-            checkpointTrigger.SetActive(true);
-            timer.SetActive(true);
+            Debug.Log("checkpoint reached for " + other.gameObject.tag);
             this.gameObject.SetActive(false);
+            nextTrigger.SetActive(true);
         }
     }
 }
