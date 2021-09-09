@@ -262,7 +262,7 @@ public class VehicleProperties : MonoBehaviour
     /*! FixedUpdate is called at a fixed interval of 0.02 seconds */
     void FixedUpdate()
     {
-        //Debug.Log("FixedUpdate");
+        //Debug.Log("FixedUpdate");\
         if (follow_camera) {
             complementary_filter(is_VR?0.3f:0.02f,ref camera_position,next_camera());
             Vector3 next_position = camera_position;
