@@ -461,7 +461,8 @@ namespace Valve.VR
                     //timing.m_nSize = (uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(Compositor_FrameTiming));
                     //vr.compositor.GetFrameTiming(ref timing, 0);
 
-                    Time.fixedDeltaTime = Time.timeScale / vr.hmd_DisplayFrequency;
+                    // DON'T do this, it breaks WebGL playability.
+                    //Time.fixedDeltaTime = Time.timeScale / vr.hmd_DisplayFrequency;
                 }
             }
         }

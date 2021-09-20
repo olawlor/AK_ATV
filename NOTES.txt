@@ -1,0 +1,23 @@
+Performance and Debugging Notes
+
+2021-09-20: Chasing the inconsistent speed
+
+The ATV drives different on different machines, and at different framerates. 
+
+The biggest issue is the project settings (Edit -> Project Settings -> Time) had fixedDeltaTime hardcoded to 180fps, and Maximum Allowed Timestep the same value.  This meant physics entered slow motion if you were getting below 180Hz (!). 
+
+WebGL seems to run fixedUpdate at 50Hz always. 
+
+Another issue is the SteamVR SDK (included for VR but always active) was hardcoded in
+SteamVR/Scripts/SteamVR_Render.cs to lock the fixedDeltaTime to the graphics framerate,
+but only if it thinks VR is enabled. 
+
+Fixes:
+	- Set project fixedDeltaTime settings to 0.02 seconds, 50Hz, to work in WebGL.
+	- Increase the project maximum allowed timestep to 0.1 seconds, so physics still works even if the framerate drops (e.g., ultra settings).
+This seems to run consistently between 300fps (editor) and 30fps (ultra settings in WebGL). 
+The ATV driving is a bit sticky, may need to re-tune steering (faster) and rollovers (easier). 
+
+
+
+
