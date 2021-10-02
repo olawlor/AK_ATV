@@ -35,7 +35,7 @@ public class ControllerKeyboard : MonoBehaviour
                 if (Input.GetKey("d")) { rotate = +1.0f; }
                 if (Input.GetKey("left")) { rotate = -1.0f; }
                 if (Input.GetKey("right")) { rotate = +1.0f; }
-                vehicle.complementary_filter(0.01f, ref vehicle.cur_steer, rotate);
+                vehicle.complementary_filter(0.03f, ref vehicle.cur_steer, rotate);
             }
             // Reset (after flip)
             if (Input.GetKey("r")) {

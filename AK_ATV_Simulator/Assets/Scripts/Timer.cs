@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour {
         }
 
     }
-    void ResetTime(){
+    public void ResetTime(){
         time = 0.0f;
     }
     void DisplayTime(float timeToDisplay) {

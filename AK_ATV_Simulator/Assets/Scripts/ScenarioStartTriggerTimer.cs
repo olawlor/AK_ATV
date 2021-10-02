@@ -24,11 +24,9 @@ public class ScenarioStartTriggerTimer : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Trigger entered by " + other.gameObject.tag);
         if (other.gameObject.tag == "Player") {
-            Debug.Log("Starting scenario for " + other.gameObject.tag);
-            other.GetComponent<VehicleScenario>().Update_Scenario(scenario);
+            other.GetComponent<VehicleScenario>().StartScenario(scenario,gameObject,checkpointTrigger);
             checkpointTrigger.SetActive(true);
             timer.SetActive(true);
-            this.gameObject.SetActive(false);
         }
     }
 }

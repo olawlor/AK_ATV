@@ -258,14 +258,14 @@ public class VehicleProperties : MonoBehaviour
         return v;
     }
 
-    static int fixedCount=0;
+    //static int fixedCount=0;
     
-    // Old: FixedUpdate is called once per physicsframe
+    // FixedUpdate is called once per physicsframe
     void FixedUpdate()
     {
         //Debug.Log("FixedUpdate");
         if (follow_camera) {
-            complementary_filter(is_VR?0.3f:0.02f,ref camera_position,next_camera());
+            complementary_filter(is_VR?0.3f:0.06f,ref camera_position,next_camera());
             Vector3 next_position = camera_position;
             //if (is_VR) next_position.y=0.0f; // leave the floor as the floor
             follow_camera.transform.position=next_position;
@@ -283,7 +283,7 @@ public class VehicleProperties : MonoBehaviour
         
         // Update vehicle center of mass physics
         float dt=Time.fixedDeltaTime;
-        if (++fixedCount%256==0) Debug.Log("FixedUpdate timestep "+dt+" seconds = "+(1.0f/dt)+" fps");
+        //if (++fixedCount%256==0) Debug.Log("FixedUpdate timestep "+dt+" seconds = "+(1.0f/dt)+" fps");
         
         acceleration = (rb.velocity - last_velocity)/dt;
         centripital = Vector3.Dot(acceleration,transform.right)/9.81f;

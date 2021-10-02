@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class VehicleScenario : MonoBehaviour
 {
-    private enum scenario_state { FREEROAM, BEGIN, IN_PROGRESS, END };
-    private scenario_state cur_scenario = scenario_state.FREEROAM;
+    private enum scenario_state { FREEROAM, STARTING, IN_PROGRESS, ENDING };
+    private scenario_state state = scenario_state.FREEROAM;
 
     public GameObject scenarioMenu;
     public Text scenarioAnnounce;
@@ -17,63 +17,96 @@ public class VehicleScenario : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cur_scenario = scenario_state.FREEROAM;
+        state = scenario_state.FREEROAM;
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
-
-    public void Resume() {
-        scenarioMenu.SetActive(false);
-        Time.timeScale = 1f;
-        Update_Scenario();
-    }
-
-    private void BeginScenario(string msg) {
+    // Bring up menu at scenario start
+    private void BeginScenarioMenu(string msg) {
+        state = scenario_state.STARTING; //<- bring up starting scenario menu
         scenarioMenu.SetActive(true);
         Time.timeScale = 0f;
         scenarioAnnounce.text = "New Scenario";
         scenarioDesc.text = msg;
+        
+        // No other mission is active:
         foreach (GameObject sp in scenarioStartPoints) sp.SetActive(false);
     }
 
-    private void EndScenario(string msg) {
+    // Bring up menu at scenario end
+    private void EndScenarioMenu(string msg) {
+        state = scenario_state.ENDING; 
         scenarioMenu.SetActive(true);
         Time.timeScale = 0f;
         scenarioAnnounce.text = "Scenario Complete";
         scenarioDesc.text = msg;
+        
+        // Any (other) mission can be active now:
         foreach (GameObject sp in scenarioStartPoints) sp.SetActive(true);
     }
+    
+    // This is called by Canvas -> ScenarioButton -> ResumeButton to exit a menu.
+    public void Resume() {
+        scenarioMenu.SetActive(false);
+        Time.timeScale = 1f;
+        UpdateScenario();
+    }
 
-    public void Update_Scenario(params string[] msg) {
-        if (cur_scenario == scenario_state.FREEROAM)
-        {
-            Debug.Log("Beginning Scenario: " + msg[0]);
-            cur_scenario = scenario_state.BEGIN;
-            BroadcastMessage("BeginScenario", msg[0]);
-        }
-        else if (cur_scenario == scenario_state.BEGIN)
+    // Advance the finite state machine for the scenario handling.
+    public void UpdateScenario() {
+        if (state == scenario_state.STARTING) // exit the menu with mission description
         {
             Debug.Log("Scenario in progress...");
-            cur_scenario = scenario_state.IN_PROGRESS;
+            state = scenario_state.IN_PROGRESS;
         }
-        else if (cur_scenario == scenario_state.IN_PROGRESS)
-        {
-            Debug.Log("Ending Scenario: " + msg[0]);
-            cur_scenario = scenario_state.END;
-            BroadcastMessage("EndScenario", msg[0]);
-        }
-        else if (cur_scenario == scenario_state.END)
+        else if (state == scenario_state.ENDING) // exit the mission-done modal menu
         {
             Debug.Log("Returning to freeroam");
-            cur_scenario = scenario_state.FREEROAM;
+            state = scenario_state.FREEROAM;
         }
         else
         {
-            Debug.Log("ERROR: Impossible state reached in Vehicle Scenarios");
+            Debug.Log("ERROR: Impossible state reached in Vehicle Scenario.UpdateScenario");
         }
+    }
+    
+    /* Public static members store the hud-visible scenario state: */
+    public static string MissionGoal;  ///< mission goal text
+    public static GameObject MissionStart; ///< stores mission start trigger (so it can be reactivated)
+    public static GameObject MissionEnd; ///< mission end trigger object (or null if none active)
+    
+    /* Start a new scenario: */
+    public void StartScenario(string msg, GameObject startTrigger, GameObject endTrigger) {
+        Debug.Log("Starting scenario " + msg);
+        
+        startTrigger.SetActive(false); //<- turn off the current trigger (avoid re-triggering)
+        endTrigger.SetActive(true); ///<- turn on the end trigger so user can finish
+        
+        // Store data in static variables, for access by the HUD
+        VehicleScenario.MissionGoal = msg;
+        VehicleScenario.MissionStart=startTrigger;
+        VehicleScenario.MissionEnd = endTrigger;
+        
+        // Bring up menu:
+        BeginScenarioMenu(msg);
+    }
+    
+    /* Update the end trigger (for compass) */
+    public void UpdateEnd(GameObject endTrigger) {
+        VehicleScenario.MissionEnd = endTrigger;
+    }
+    
+    /* Finish the current scenario: */
+    public void EndScenario(string msg) {
+        Debug.Log("Ending scenario " + msg);
+        
+        VehicleScenario.MissionEnd.SetActive(false); ///<- hide end arrow
+        VehicleScenario.MissionStart.SetActive(true); ///<- allow user to retry mission
+        
+        VehicleScenario.MissionGoal = msg;
+        VehicleScenario.MissionStart=null;
+        VehicleScenario.MissionEnd = null;
+        
+        // Bring up menu:
+        EndScenarioMenu(msg);
     }
 }

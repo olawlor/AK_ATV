@@ -1,4 +1,5 @@
-﻿/* Scenario indicator pointer */
+﻿/* Make the current scenario indicator pointer bounce up and down.
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,7 @@ public class CubeMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 newpos=new Vector3(pos.x,pos.y,pos.z);
-        newpos.y += Mathf.Abs(Mathf.Sin(Time.time * speed)) * height;
+        newpos.y += Mathf.Abs(Mathf.Sin(Time.time * speed * 0.5f)) * height;
         transform.position = newpos;
     }
 }

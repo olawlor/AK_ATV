@@ -21,9 +21,7 @@ public class ScenarioYellAtPlayer : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Trigger entered by " + other.gameObject.name);
         if (other.gameObject.name == "VehicleCoords") {
-            Debug.Log("Ending scenario for " + other.gameObject.name);
-            other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
-            this.gameObject.SetActive(false);
+            other.GetComponent<VehicleScenario>().EndScenario(endtext);
         }
     }
 }

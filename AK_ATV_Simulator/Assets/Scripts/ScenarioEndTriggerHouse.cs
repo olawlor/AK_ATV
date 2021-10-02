@@ -24,12 +24,10 @@ public class ScenarioEndTriggerHouse : MonoBehaviour
         //Debug.Log("Trigger entered by " + other.gameObject.name);
         if (other.gameObject.name == "VehicleCoords") {
             Debug.Log("Ending scenario for " + other.gameObject.name);
-            other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
-            startTrigger.SetActive(true);
-            this.gameObject.SetActive(false);
+            other.GetComponent<VehicleScenario>().EndScenario(endtext);
         }
         if (altEnd.name == "VehicleCoords") {
-            other.GetComponent<VehicleScenario>().Update_Scenario("you destroyed the house!");
+            other.GetComponent<VehicleScenario>().EndScenario("you destroyed the house!");
             altEnd.SetActive(false);
         }
     }

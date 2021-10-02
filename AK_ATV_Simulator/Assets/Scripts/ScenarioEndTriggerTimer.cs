@@ -11,27 +11,21 @@ public class ScenarioEndTriggerTimer : MonoBehaviour
     //public GameObject startTrigger;
     public string endtext;
     public GameObject timer;
+    private Timer timerScript;
 
     // Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
+    void Start()
+    {
+        timerScript=timer.GetComponent<Timer>();
+    }
 
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Trigger entered by " + other.gameObject.name);
         if (other.gameObject.name == "VehicleCoords") {
-            string finalTime = timer.GetComponent<Timer>().finalTime;
-            timer.GetComponent<Timer>().BroadcastMessage("ResetTime");
-            Debug.Log("Ending scenario for " + other.gameObject.name);
-            other.GetComponent<VehicleScenario>().Update_Scenario(endtext + finalTime);
-            //startTrigger.SetActive(true);
+            
+            string finalTime = timerScript.finalTime;
+            timerScript.ResetTime();
+            other.GetComponent<VehicleScenario>().EndScenario(endtext + finalTime);
             resetRace.SetActive(true);
             this.gameObject.SetActive(false);
             timer.SetActive(false);

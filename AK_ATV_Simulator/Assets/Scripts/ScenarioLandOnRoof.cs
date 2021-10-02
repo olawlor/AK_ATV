@@ -24,7 +24,7 @@ public class ScenarioLandOnRoof : MonoBehaviour
         //Debug.Log("Trigger entered by " + other.gameObject.name);
         if (other.gameObject.name == "VehicleCoords") {
             Debug.Log("Ending scenario for " + other.gameObject.name);
-            other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
+            other.GetComponent<VehicleScenario>().EndScenario(endtext);
             this.gameObject.SetActive(false);
             house.gameObject.SetActive(false);
         }

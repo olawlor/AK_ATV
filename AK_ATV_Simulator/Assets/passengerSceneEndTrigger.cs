@@ -28,12 +28,10 @@ public class passengerSceneEndTrigger : MonoBehaviour
         if (other.gameObject.name == "VehicleCoords")
         {
             Debug.Log("Ending scenario for " + other.gameObject.name);
-            other.GetComponent<VehicleScenario>().Update_Scenario(endtext);
+            other.GetComponent<VehicleScenario>().EndScenario(endtext);
+            
             passenger.SetActive(false);
             secondPassenger.SetActive(false);
-            startTrigger.SetActive(true);
-            mountainPassTrigger.SetActive(true);
-            this.gameObject.SetActive(false);
         }
     }
 }
