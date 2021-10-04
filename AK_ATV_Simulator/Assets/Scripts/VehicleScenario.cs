@@ -13,6 +13,11 @@ public class VehicleScenario : MonoBehaviour
     public Text scenarioDesc;
 
     public GameObject[] scenarioStartPoints;
+    void SetStartsActive(bool active)
+    {
+        foreach (GameObject sp in scenarioStartPoints) sp.SetActive(active);
+    }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +34,7 @@ public class VehicleScenario : MonoBehaviour
         scenarioDesc.text = msg;
         
         // No other mission is active:
-        foreach (GameObject sp in scenarioStartPoints) sp.SetActive(false);
+        SetStartsActive(false);
     }
 
     // Bring up menu at scenario end
@@ -41,7 +46,7 @@ public class VehicleScenario : MonoBehaviour
         scenarioDesc.text = msg;
         
         // Any (other) mission can be active now:
-        foreach (GameObject sp in scenarioStartPoints) sp.SetActive(true);
+        SetStartsActive(true);
     }
     
     // This is called by Canvas -> ScenarioButton -> ResumeButton to exit a menu.
@@ -71,6 +76,17 @@ public class VehicleScenario : MonoBehaviour
     
     /* Public static members store the hud-visible scenario state: */
     public static string MissionGoal;  ///< mission goal text
+    public static float MissionGoalTime=10000.0f; // last time mission text changed
+    
+    // Set this as the new mission goal
+    public static void UpdateMissionGoal(string msg) 
+    {
+        Debug.Log("Updating mission text to " + msg);
+        VehicleScenario.MissionGoal = msg;
+        VehicleScenario.MissionGoalTime = Time.time;
+    }
+    
+    
     public static GameObject MissionStart; ///< stores mission start trigger (so it can be reactivated)
     public static GameObject MissionEnd; ///< mission end trigger object (or null if none active)
     
@@ -82,11 +98,11 @@ public class VehicleScenario : MonoBehaviour
         endTrigger.SetActive(true); ///<- turn on the end trigger so user can finish
         
         // Store data in static variables, for access by the HUD
-        VehicleScenario.MissionGoal = msg;
+        VehicleScenario.UpdateMissionGoal(msg);
         VehicleScenario.MissionStart=startTrigger;
         VehicleScenario.MissionEnd = endTrigger;
         
-        // Bring up menu:
+        // Bring up start menu:
         BeginScenarioMenu(msg);
     }
     
@@ -99,14 +115,15 @@ public class VehicleScenario : MonoBehaviour
     public void EndScenario(string msg) {
         Debug.Log("Ending scenario " + msg);
         
-        VehicleScenario.MissionEnd.SetActive(false); ///<- hide end arrow
-        VehicleScenario.MissionStart.SetActive(true); ///<- allow user to retry mission
+        // Bring up end menu:
+        //EndScenarioMenu(msg);
+        SetStartsActive(true);
         
-        VehicleScenario.MissionGoal = msg;
+        VehicleScenario.MissionEnd.SetActive(false); ///<- hide end arrow
+        VehicleScenario.MissionStart.SetActive(false); ///<- don't allow user to retry last mission immediately
+        
+        VehicleScenario.UpdateMissionGoal(msg);
         VehicleScenario.MissionStart=null;
         VehicleScenario.MissionEnd = null;
-        
-        // Bring up menu:
-        EndScenarioMenu(msg);
     }
 }

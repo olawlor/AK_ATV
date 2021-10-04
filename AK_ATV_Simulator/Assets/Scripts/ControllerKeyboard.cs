@@ -27,15 +27,17 @@ public class ControllerKeyboard : MonoBehaviour
                 float motor = 0.0f;
                 if (Input.GetKey("w")||Input.GetKey("up")) { motor = +3.0f; }
                 if (Input.GetKey("s")||Input.GetKey("down")) { motor = -3.0f; }
-                vehicle.complementary_filter(0.03f, ref vehicle.cur_motor_power, motor);
+                vehicle.complementary_filter(1.5f*Time.fixedDeltaTime, ref vehicle.cur_motor_power, motor);
+                
                 if(!Input.GetKey("w") && !Input.GetKey("s") && !Input.GetKey("up") && !Input.GetKey("down")){vehicle.get_rb().velocity = vehicle.get_rb().velocity * 1000 / 1003;}
                 if (Input.GetKey("space")) { vehicle.get_rb().velocity = vehicle.get_rb().velocity * 100 / 102;}
+                
                 float rotate = 0.0f;
                 if (Input.GetKey("a")) { rotate = -1.0f; }
                 if (Input.GetKey("d")) { rotate = +1.0f; }
                 if (Input.GetKey("left")) { rotate = -1.0f; }
                 if (Input.GetKey("right")) { rotate = +1.0f; }
-                vehicle.complementary_filter(0.03f, ref vehicle.cur_steer, rotate);
+                vehicle.complementary_filter(1.5f*Time.fixedDeltaTime, ref vehicle.cur_steer, rotate);
             }
             // Reset (after flip)
             if (Input.GetKey("r")) {

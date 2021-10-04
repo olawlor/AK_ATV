@@ -2580,7 +2580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 1066993354}
-  scenario: Drive to the lake!
+  scenario: Drive to the lake
 --- !u!1 &382247506
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,7 +4462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 238332476}
-  endtext: Stunts are not safe. Leave the tricks to professionals.
+  endtext: Good job! Stunts are not safe. Leave the tricks to professionals.
 --- !u!65 &673076287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5472,7 +5472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1858838509}
-  endtext: You've successfully parked in the truck
+  endtext: You've safely parked in the truck. Well done!
 --- !u!65 &821626925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6375,7 +6375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 373816400}
-  endtext: You've arrived at the lake!
+  endtext: You've arrived at the lake.  Nice driving!
 --- !u!1 &1069582436
 GameObject:
   m_ObjectHideFlags: 0
@@ -7520,7 +7520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1535366739}
-  endtext: You've safely navigated the pass
+  endtext: You've safely navigated the pass.  Nicely done!
 --- !u!65 &1266176380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8257,6 +8257,46 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6640573
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.74768174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.351929
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4834465
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636616322448943261, guid: 76380f506edb9454389e67982b67a325,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 83.22
+      objectReference: {fileID: 0}
     - target: {fileID: 6636616323259495124, guid: 76380f506edb9454389e67982b67a325,
         type: 3}
       propertyPath: m_Name
@@ -8325,7 +8365,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1345926907}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1367594013}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dfdc52b0cc10324fba937b4cc09ed9e, type: 3}
@@ -8388,6 +8428,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dceeca3e930a413458913fd2f889e527, type: 3}
+--- !u!1 &1367594013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6636616322448943260, guid: 76380f506edb9454389e67982b67a325,
+    type: 3}
+  m_PrefabInstance: {fileID: 1345926907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1369162335
 GameObject:
   m_ObjectHideFlags: 0
@@ -9549,6 +9595,7 @@ GameObject:
   - component: {fileID: 1497293340}
   - component: {fileID: 1497293339}
   - component: {fileID: 1497293338}
+  - component: {fileID: 1497293341}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -9667,6 +9714,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497293336}
   m_CullTransparentMesh: 0
+--- !u!114 &1497293341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497293336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08c09c883fb56f50c93835c36a5dfb1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicle: {fileID: 1367594013}
 --- !u!1 &1515394876
 GameObject:
   m_ObjectHideFlags: 0
@@ -10614,7 +10674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1685877823}
   resetRace: {fileID: 543402459}
-  endtext: 'Well Done! Your final time was: '
+  endtext: 'Well done! Your final time was: '
   timer: {fileID: 1095056221}
 --- !u!65 &1578389740
 BoxCollider:
@@ -11432,8 +11492,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714158294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1450.5774, y: -724.1888, z: 334.5645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2821, y: -1474.3, z: 690.53}
+  m_LocalScale: {x: 1.9801, y: 1.9801, z: 1.9801}
   m_Children:
   - {fileID: 1697726865}
   m_Father: {fileID: 1581646901}
@@ -11663,7 +11723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 1764668023}
-  endtext: You have safely brought your friends to the mountain
+  endtext: You have safely brought your friends to the mountain.  Nice!
   passenger: {fileID: 335831954}
   secondPassenger: {fileID: 2066940096}
   mountainPassTrigger: {fileID: 1535366739}
@@ -14140,7 +14200,7 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
+  m_InputActionsPerSecond: 20
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &2082501562
