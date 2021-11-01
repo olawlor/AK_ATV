@@ -55,8 +55,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DemoTools\CameraController.cs" />
-     <Compile Include="Assets\DemoTools\WorldAxis.cs" />
+     <Compile Include="Assets\Scenarios\ScenarioPassenger\passenger2script.cs" />
+     <Compile Include="Assets\Scenarios\ScenarioPassenger\passengerSceneEndTrigger.cs" />
+     <Compile Include="Assets\Scenarios\ScenarioPassenger\passengerSceneStartTrigger.cs" />
+     <Compile Include="Assets\Scenarios\ScenarioPassenger\passengerScript.cs" />
+     <Compile Include="Assets\Scenarios\ScenarioPassenger\respawn.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\ControllerKeyboard.cs" />
      <Compile Include="Assets\Scripts\ControllerVR.cs" />
      <Compile Include="Assets\Scripts\CubeMovement.cs" />
@@ -90,38 +94,34 @@
      <Compile Include="Assets\Scripts\VehicleProperties.cs" />
      <Compile Include="Assets\Scripts\VehicleScenario.cs" />
      <Compile Include="Assets\Scripts\WaterCollision.cs" />
+     <Compile Include="Assets\Scripts\WorldAxis.cs" />
      <Compile Include="Assets\Scripts\compass.cs" />
      <Compile Include="Assets\Scripts\mission_direction.cs" />
      <Compile Include="Assets\Scripts\rewindIndicator.cs" />
      <Compile Include="Assets\Scripts\speedometer.cs" />
-     <Compile Include="Assets\passenger2script.cs" />
-     <Compile Include="Assets\passengerSceneEndTrigger.cs" />
-     <Compile Include="Assets\passengerSceneStartTrigger.cs" />
-     <Compile Include="Assets\passengerScript.cs" />
-     <Compile Include="Assets\respawn.cs" />
-     <None Include="Assets\TerrainSampleAssets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Landscape\TerrainSampleAssets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\VehicleSimulator\VertexColorShader.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters 2.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters 2.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Models\Heavy_Pickup.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Leading Characters 2.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Following Characters 2.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Scenarios\ScenarioTruckbed\Heavy_Pickup.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\UI\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
  <Reference Include="UnityEngine">
  <HintPath>/me/olawlor/Unity/Hub/Editor/2019.4.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -300,7 +300,7 @@
  <HintPath>/me/olawlor/Unity/Hub/Editor/2019.4.0f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Valve.Newtonsoft.Json">
- <HintPath>/m/code/AK_ATV/AK_ATV_Simulator/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+ <HintPath>/m/code/AK_ATV/AK_ATV_Simulator/Assets/VR/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>/me/olawlor/Unity/Hub/Editor/2019.4.0f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
