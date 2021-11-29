@@ -17,6 +17,10 @@ public class HudMission : MonoBehaviour
     void Start()
     {
         textmesh=gameObject.GetComponent<TextMeshPro>();
+        VehicleScenario.UpdateMissionGoal("This phone will provide you with everything you need to know.");
+        VehicleScenario.UpdateMissionGoal("The yellow triangle at the top of the compass points the way you are currently heading.");
+        VehicleScenario.UpdateMissionGoal("when there is a pink line on the compass it will be pointing toward the objective");
+        //need to figure out how to properly wait between messages
     }
 
     private string last="";
