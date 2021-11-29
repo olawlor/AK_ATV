@@ -76,16 +76,21 @@ public class TireSimulator : MonoBehaviour
                 suspension.currentForce);
         }
         
-        /*! \ Drive any driving wheels */
-        if (vehicle.drive_wheels>=4 || vehicle.cur_motor_power<0.0f || steer==0.0f) 
-        {
-            /*! \ Compute motor torque */
-            Vector3 t=transform.right.normalized*vehicle.cur_motor_power*vehicle.max_motor_torque;
-            /*! \ Apply torque to wheels */
-            rb.AddTorque(t);
-            /*! \ Apply reaction torque to vehicle body (for conservation of angular momentum) */
-            vehicle_rb.AddTorque(-t);
+        
+        /*! \ Compute motor torque */
+        Vector3 t=transform.right.normalized*vehicle.cur_motor_power*vehicle.max_motor_torque;
+        
+        /* \ Braking torque */
+        Vector3 brakeDir=-rb.angularVelocity;
+        if (brakeDir.magnitude<0.01f) { // almost stopped
+            brakeDir=10.0f*brakeDir.normalized;
         }
+        t += brakeDir*vehicle.cur_brake_power*vehicle.max_brake_torque;
+        
+        /*! \ Apply torque to wheels */
+        rb.AddTorque(t);
+        /*! \ Apply reaction torque to vehicle body (for conservation of angular momentum) */
+        vehicle_rb.AddTorque(-t);
         
         /*! \ Rotate steering parts of suspension */
         if (steer!=0.0f) {

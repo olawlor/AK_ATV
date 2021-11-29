@@ -29,8 +29,10 @@ public class VehicleProperties : MonoBehaviour
     public int drive_wheels=2;
     /*!< N-m of motor torque (per wheel). Read by the wheels during driving */
     public float max_motor_torque=300.0f/2;
+    public float max_brake_torque=100.0f; // N-m of torque per rad/sec of angular velocity
     /*!< Read by the wheels during driving */
     public float cur_motor_power=0.0f;
+    public float cur_brake_power=0.0f;
     /*!< Read by the wheels during driving */
     public float cur_steer=0.0f;
 
