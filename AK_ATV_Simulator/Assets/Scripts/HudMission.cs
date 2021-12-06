@@ -14,15 +14,25 @@ public class HudMission : MonoBehaviour
     private TextMeshPro textmesh;
     
     // Start is called before the first frame update
+    
     void Start()
     {
         textmesh=gameObject.GetComponent<TextMeshPro>();
-        VehicleScenario.UpdateMissionGoal("This phone will provide you with everything you need to know.");
-        VehicleScenario.UpdateMissionGoal("The yellow triangle at the top of the compass points the way you are currently heading.");
-        VehicleScenario.UpdateMissionGoal("when there is a pink line on the compass it will be pointing toward the objective");
+        StartCoroutine(startText());
+       
         //need to figure out how to properly wait between messages
     }
+    IEnumerator startText()
+    {   //Wait for 3 seconds
 
+        VehicleScenario.UpdateMissionGoal("This phone will provide you with everything you need to know.");
+        yield return new WaitForSecondsRealtime(5); 
+        VehicleScenario.UpdateMissionGoal("The yellow triangle at the top of the compass points the way you are currently heading.");
+        yield return new WaitForSecondsRealtime(5);
+        VehicleScenario.UpdateMissionGoal("when there is a pink line on the compass it will be pointing toward the objective");
+        yield return new WaitForSecondsRealtime(1);
+    }
+    
     private string last="";
 
     // Update is called once per frame
@@ -32,7 +42,7 @@ public class HudMission : MonoBehaviour
         float MET = Time.time - VehicleScenario.MissionGoalTime;
         if (VehicleScenario.MissionEnd==null && MET>15.0f) {
             // Back to start mission text:
-            VehicleScenario.UpdateMissionGoal("You can drive through another mission start arrow");
+            VehicleScenario.UpdateMissionGoal("Drive through an arrow to start a mission");
         }
         
         // Update color of background
