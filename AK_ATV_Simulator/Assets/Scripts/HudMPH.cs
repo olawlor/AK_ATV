@@ -25,8 +25,13 @@ public class HudMPH : MonoBehaviour
     {
         int speed=Mathf.RoundToInt(vehicle.mph);
         if (speed<0) speed=-speed;
-        // maybe change color of text based on speed here?  green-yellow-red color code?
-        
+        if(speed <= 15 && speed >= -10){
+            textmesh.color = Color.green;
+        }else if((speed > 15 && speed <=20)||(speed <-10 && speed >=-15)){
+            textmesh.color = Color.yellow;
+        }else{
+            textmesh.color = Color.red;
+        }
         textmesh.text = speed + " mph";
     }
 }
