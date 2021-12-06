@@ -24,7 +24,6 @@ public class HudMPH : MonoBehaviour
     void Update()
     {
         int speed=Mathf.RoundToInt(vehicle.mph);
-        if (speed<0) speed=-speed;
         if(speed <= 15 && speed >= -10){
             textmesh.color = Color.green;
         }else if((speed > 15 && speed <=20)||(speed <-10 && speed >=-15)){
@@ -32,6 +31,8 @@ public class HudMPH : MonoBehaviour
         }else{
             textmesh.color = Color.red;
         }
+        if (speed<0) speed=-speed;
+        
         textmesh.text = speed + " mph";
     }
 }
