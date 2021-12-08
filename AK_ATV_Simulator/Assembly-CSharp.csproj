@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\WaterCollision.cs" />
     <Compile Include="Assets\Scripts\WorldAxis.cs" />
     <Compile Include="Assets\Scripts\compass.cs" />
+    <Compile Include="Assets\Scripts\helmetToggle.cs" />
     <Compile Include="Assets\Scripts\mission_direction.cs" />
     <Compile Include="Assets\Scripts\rewindIndicator.cs" />
     <Compile Include="Assets\Scripts\speedometer.cs" />
