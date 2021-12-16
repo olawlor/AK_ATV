@@ -125,6 +125,8 @@ public class TimeBodyVehicleCoord : MonoBehaviour
     public void StopRewind(){
         //rb.velocity = veloBeforeRewind;
         BroadcastMessage("StopDisplayRewind");
+        BroadcastMessage("HelmetCheck"); //respawns the atv after rewind if not wearing helmet
+                                         //needs fine tuning/ explanation for player
         rb.velocity = Vector3.zero;
         isRewinding = false;
         rb.isKinematic = false;

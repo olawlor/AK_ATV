@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\compass.cs" />
     <Compile Include="Assets\Scripts\helmetToggle.cs" />
     <Compile Include="Assets\Scripts\mission_direction.cs" />
+    <Compile Include="Assets\Scripts\noHelmet.cs" />
     <Compile Include="Assets\Scripts\rewindIndicator.cs" />
     <Compile Include="Assets\Scripts\speedometer.cs" />
     <None Include="Assets\Landscape\TerrainSampleAssets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />

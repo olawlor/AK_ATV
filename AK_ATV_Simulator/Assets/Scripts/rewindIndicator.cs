@@ -22,6 +22,7 @@ public class rewindIndicator : MonoBehaviour
         }
     }
     public void DisplayRewind(){
+        
         indicatorCanvas.alpha = 1;
     }
 

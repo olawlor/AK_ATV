@@ -80,6 +80,7 @@ public class TimeBody : MonoBehaviour
      */
     void Rewind(){
         if(pointsInTime.Count > 0){
+            
             PointInTime pointInTime = pointsInTime[0];
             transform.position = pointInTime.position;
             transform.rotation = pointInTime.rotation;

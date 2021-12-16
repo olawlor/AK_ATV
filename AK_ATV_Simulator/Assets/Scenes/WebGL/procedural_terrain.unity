@@ -123,12 +123,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11826555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1375687286, guid: 76380f506edb9454389e67982b67a325,
+    type: 3}
+  m_PrefabInstance: {fileID: 1345926907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &11826556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1375687287, guid: 76380f506edb9454389e67982b67a325,
     type: 3}
   m_PrefabInstance: {fileID: 1345926907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &11826559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11826555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1166fc2622d2604dbc796ad1bd00548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missingHelmet: {fileID: 334256685}
+  helmet: {fileID: 261980060}
 --- !u!1 &111696838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4398057513785389848, guid: e80e638668b7bdfb486ba3800fec1af8,
@@ -140,6 +160,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4398057513912009442, guid: e80e638668b7bdfb486ba3800fec1af8,
     type: 3}
   m_PrefabInstance: {fileID: 4398057513807915230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &261980060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7cfad2137c8e75a4fb2f13a4971efed8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1662178211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &334256685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4794482424326239095, guid: 76380f506edb9454389e67982b67a325,
+    type: 3}
+  m_PrefabInstance: {fileID: 1345926907}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &335831954 stripped
 GameObject:
@@ -264,6 +296,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1875305932, guid: 76380f506edb9454389e67982b67a325, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4794482424326239095, guid: 76380f506edb9454389e67982b67a325,
         type: 3}
       propertyPath: m_IsActive
@@ -272,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 5233470401790998988, guid: 76380f506edb9454389e67982b67a325,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6636616322813411640, guid: 76380f506edb9454389e67982b67a325,
         type: 3}
@@ -369,7 +405,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1002135251, guid: 76380f506edb9454389e67982b67a325, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76380f506edb9454389e67982b67a325, type: 3}
 --- !u!114 &1345926909 stripped
 MonoBehaviour:
