@@ -1070,8 +1070,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.35692668, z: 2.490988}
-  m_Center: {x: 0, y: -0.07153666, z: 0.24549413}
+  m_Size: {x: 0.36, y: 0.46050978, z: 2.490988}
+  m_Center: {x: 0, y: 0.18034291, z: 0.24549413}
 --- !u!114 &6636616322448943254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1092,9 @@ MonoBehaviour:
   angular_drag_tire: 0.01
   drive_wheels: 2
   max_motor_torque: 70
+  max_brake_torque: 100
   cur_motor_power: 0
+  cur_brake_power: 0
   cur_steer: 0
   last_velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
@@ -2043,8 +2045,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1990273, y: 1.738374, z: 0.05272881}
-  m_Center: {x: 1.3995999e-16, y: 6.4215156e-15, z: -0.59673524}
+  m_Size: {x: 2.1990273, y: 1.738374, z: 0.028293869}
+  m_Center: {x: -2.8711876e-15, y: 6.067817e-14, z: -0.6089527}
 --- !u!1 &6636616324236484635
 GameObject:
   m_ObjectHideFlags: 0
