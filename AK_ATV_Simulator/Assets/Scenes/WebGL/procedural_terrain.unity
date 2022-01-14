@@ -623,6 +623,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3185712502720428600, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502720428600, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502720428600, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502720428600, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502842492297, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502842492297, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502842492297, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712502842492297, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3185712503625725475, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
         type: 3}
       propertyPath: vehicle
@@ -633,6 +673,56 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1345926909}
+    - target: {fileID: 3185712503674048322, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712503674048322, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712503674048322, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712503674048322, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712503723315862, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712504510745400, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712504510745400, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712504510745400, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185712504510745400, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411841655457771782, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Tutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 6938068519781890797, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
         type: 3}
       propertyPath: m_Name

@@ -18,9 +18,9 @@ Shader "Valve/VR/Highlight"
 	CGINCLUDE
 		
 		// Pragmas --------------------------------------------------------------------------------------------------------------------------------------------------
-		#pragma target 5.0
-		#pragma only_renderers d3d11 vulkan glcore
-		#pragma exclude_renderers gles
+		//#pragma target 5.0
+		//#pragma only_renderers d3d11 vulkan glcore
+		//#pragma exclude_renderers gles
 
 		// Includes -------------------------------------------------------------------------------------------------------------------------------------------------
 		#include "UnityCG.cginc"
@@ -76,41 +76,12 @@ Shader "Valve/VR/Highlight"
 			return vColor.rgba;
 		}
 
-		// MainPs ---------------------------------------------------------------------------------------------------------------------------------------------------
-		float4 SeeThruPS( VertexOutput i ) : SV_Target
-		{
-			float4 vTexel = tex2D( _MainTex, i.uv ).rgba;
-			float4 vColor = vTexel.rgba * _TintColor.rgba * i.color.rgba * _SeeThru;
-			vColor.rgba = saturate( 2.0 * vColor.rgba );
-			float flAlpha = vColor.a;
-
-			vColor.rgb *= vColor.a;
-			vColor.a = lerp( 0.0, _Darken, flAlpha * _SeeThru );
-
-			return vColor.rgba;
-		}
-
 	ENDCG
 
 	SubShader
 	{
 		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
 		LOD 100
-
-		// Behind Geometry ---------------------------------------------------------------------------------------------------------------------------------------------------
-		Pass
-		{
-			// Render State ---------------------------------------------------------------------------------------------------------------------------------------------
-			Blend One OneMinusSrcAlpha
-			Cull Off
-			ZWrite Off
-			ZTest Greater
-
-			CGPROGRAM
-				#pragma vertex MainVS
-				#pragma fragment SeeThruPS
-			ENDCG
-		}
 
 		Pass
 		{

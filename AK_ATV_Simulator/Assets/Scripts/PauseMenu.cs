@@ -60,6 +60,12 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         inOptionsMenu = false;
     }
+    /*! Prompts tutorial messages to be sent to phone gui */
+    public void Tutorial(){
+        optionsUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        //add the start tutorial cmd here
+    }
 
     /*! Loads the menu scene */
     public void LoadMenu(){
