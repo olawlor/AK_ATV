@@ -48,7 +48,7 @@ difference() {
 	}
 	
 	// Holes for mounting bolts
-	#translate(supportcenter)
+	translate(supportcenter)
 	for (side=[-1,+1])
 	translate([side*(supportbar[0]/2-8),0,0])
 		rotate([90,0,0])
