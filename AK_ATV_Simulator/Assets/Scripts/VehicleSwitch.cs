@@ -1,26 +1,34 @@
-﻿// To test with ATV, copy ATV_New prefab in file explorer
-// Attach this script to both vehicles VehicleCoords in hierarchy
-// otherPlayer = opposite players VehicleCoords, camera = Main Camera in CameraHUD
-
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-
-
-public class VehicleSwitch : MonoBehaviour
+public class SwitchScript : MonoBehaviour
 {
-    public GameObject otherPlayer;
-    public GameObject camera1;
-    public GameObject camera2;
-
-    void OnMouseDown()
+    public int dropdown;
+    public GameObject game1;
+    public GameObject game2;
+    // Start is called before the first frame update
+    void Start()
     {
-        otherPlayer.GetComponent<ControllerKeyboard>().enabled = false;
-        camera1.SetActive(true);
-        camera2.SetActive(false);
+        
+    }
 
-        GetComponent<ControllerKeyboard>().enabled = true;
+    // Update is called once per frame
+    void Update()
+    {
+         dropdown = GameObject.Find("VehicleDropdown").GetComponent<VehicleDropdown>().m_DropdownValue;
+        if (dropdown == 0)
+        {
+            Debug.Log("We're in 1");
+            game1.SetActive(true);
+            game2.SetActive(false);
+        }
+        else if (dropdown == 1)
+            {
+                Debug.Log("We're in 1");
+                game1.SetActive(false);
+                game2.SetActive(true);
+            }
+        
     }
 }
-
-

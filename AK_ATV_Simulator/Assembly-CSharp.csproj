@@ -87,10 +87,12 @@
      <Compile Include="Assets\Scripts\ScenarioStartTriggerTimer.cs" />
      <Compile Include="Assets\Scripts\ScenarioYellAtPlayer.cs" />
      <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+     <Compile Include="Assets\Scripts\SwitchScript.cs" />
      <Compile Include="Assets\Scripts\TimeBody.cs" />
      <Compile Include="Assets\Scripts\TimeBodyVehicleCoord.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\TireSimulator.cs" />
+     <Compile Include="Assets\Scripts\VehicleDropdown.cs" />
      <Compile Include="Assets\Scripts\VehicleProperties.cs" />
      <Compile Include="Assets\Scripts\VehicleScenario.cs" />
      <Compile Include="Assets\Scripts\VehicleSwitch.cs" />
