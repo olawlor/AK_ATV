@@ -1,6 +1,6 @@
 /**
  Fits inside 1.5" steel tube, and outside 1" steel tube.
-
+ This lets you slot a 1" steel tube like the existing handlebar adapter inside a 1.5" steel frame.
 */
 $fs=0.1; $fa=5;
 inch=25.4; // file units: mm
