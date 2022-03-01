@@ -31,7 +31,6 @@ public class DropdownValue : MonoBehaviour
 
         //Keep the current index of the Dropdown in a variable
         m_DropdownValue = m_Dropdown.value;
-        Debug.Log(m_DropdownValue);
         //Change the message to say the name of the current Dropdown selection using the value
         m_Message = m_Dropdown.options[m_DropdownValue].text;
     }
