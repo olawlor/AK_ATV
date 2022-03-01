@@ -16,7 +16,7 @@ public class SwitchScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         dropdown = GameObject.Find("VehicleDropdown").GetComponent<VehicleDropdown>().m_DropdownValue;
+        dropdown = GameObject.Find("VehicleDropdown").GetComponent<VehicleDropdown>().m_DropdownValue;
         if (dropdown == 0)
         {
             Debug.Log("We're in 1");
