@@ -1013,7 +1013,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017919775}
-  - component: {fileID: 2017919776}
   m_Layer: 0
   m_Name: VehicleList
   m_TagString: Untagged
@@ -1037,21 +1036,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2017919776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017919774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c45281fd6340df44b301716098d652a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdown: 0
-  game1: {fileID: 314064099}
-  game2: {fileID: 1515745097}
 --- !u!1 &2066940096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8579476884016458117, guid: 76380f506edb9454389e67982b67a325,
@@ -1170,6 +1154,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 5789537562630817402, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: mainVehicle
+      value: 
+      objectReference: {fileID: 314064099}
+    - target: {fileID: 5789537562630817402, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: otherVehicle
+      value: 
+      objectReference: {fileID: 1515745097}
     - target: {fileID: 6938068519781890797, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
         type: 3}
       propertyPath: m_Name
