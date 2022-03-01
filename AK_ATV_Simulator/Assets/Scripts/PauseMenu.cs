@@ -8,7 +8,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour { 
+public class PauseMenu : MonoBehaviour
+{
 
 
     /*!< Flag for checking if the game is paused */
@@ -29,11 +30,12 @@ public class PauseMenu : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused && !inOptionsMenu)
+            if ((GameIsPaused && !inOptionsMenu) &&
+                (GameIsPaused && !inVehiclesMenu))
             {
                 Resume();
             }
-            else if (!inOptionsMenu)
+            else if (!inOptionsMenu && !inVehiclesMenu)
             {
                 Pause();
             }

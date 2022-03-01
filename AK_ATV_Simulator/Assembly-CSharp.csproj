@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\ControllerKeyboard.cs" />
      <Compile Include="Assets\Scripts\ControllerVR.cs" />
      <Compile Include="Assets\Scripts\CubeMovement.cs" />
+     <Compile Include="Assets\Scripts\DropdownValue.cs" />
      <Compile Include="Assets\Scripts\EngineSounds.cs" />
      <Compile Include="Assets\Scripts\HudCompass.cs" />
      <Compile Include="Assets\Scripts\HudMPH.cs" />
@@ -92,10 +93,8 @@
      <Compile Include="Assets\Scripts\TimeBodyVehicleCoord.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\TireSimulator.cs" />
-     <Compile Include="Assets\Scripts\VehicleDropdown.cs" />
      <Compile Include="Assets\Scripts\VehicleProperties.cs" />
      <Compile Include="Assets\Scripts\VehicleScenario.cs" />
-     <Compile Include="Assets\Scripts\VehicleSwitch.cs" />
      <Compile Include="Assets\Scripts\WaterCollision.cs" />
      <Compile Include="Assets\Scripts\WorldAxis.cs" />
      <Compile Include="Assets\Scripts\compass.cs" />
@@ -661,6 +660,9 @@
  <Reference Include="Unity.TerrainTools">
  <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -679,6 +681,9 @@
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Sysroot.Linux_x86_64">
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
  <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
@@ -687,6 +692,9 @@
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.SysrootPackage.Editor">
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
