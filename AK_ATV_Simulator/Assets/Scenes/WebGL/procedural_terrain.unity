@@ -1458,6 +1458,31 @@ PrefabInstance:
       propertyPath: house
       value: 
       objectReference: {fileID: 1306162551}
+    - target: {fileID: 4398057514621149427, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.20764384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398057514621149427, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.2349764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398057514621149427, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0272685
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398057514621149427, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.13928238
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398057514621149427, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.019919597
+      objectReference: {fileID: 0}
     - target: {fileID: 4398057514690564746, guid: e80e638668b7bdfb486ba3800fec1af8,
         type: 3}
       propertyPath: m_Name
