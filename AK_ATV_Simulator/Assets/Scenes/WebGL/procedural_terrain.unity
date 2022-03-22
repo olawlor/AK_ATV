@@ -1220,6 +1220,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3185712503292538529, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
         type: 3}
+      propertyPath: scenarios1
+      value: 
+      objectReference: {fileID: 1345926909}
+    - target: {fileID: 3185712503292538529, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
+      propertyPath: scenarios2
+      value: 
+      objectReference: {fileID: 1127776081}
+    - target: {fileID: 3185712503292538529, guid: 8038c42295357a1ca9b42fd8ecf5b3f2,
+        type: 3}
       propertyPath: inVehiclesMenu
       value: 0
       objectReference: {fileID: 0}
