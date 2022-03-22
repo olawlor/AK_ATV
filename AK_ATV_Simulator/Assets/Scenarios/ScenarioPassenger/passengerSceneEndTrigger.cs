@@ -6,21 +6,8 @@ public class passengerSceneEndTrigger : MonoBehaviour
 {
     public GameObject startTrigger;
     public string endtext;
-    public GameObject passenger;
-    public GameObject secondPassenger;
+    public GameObject[] passengers;
     public GameObject mountainPassTrigger;
-
-    // Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,9 +16,11 @@ public class passengerSceneEndTrigger : MonoBehaviour
         {
             Debug.Log("Ending scenario for " + other.gameObject.name);
             other.GetComponent<VehicleScenario>().EndScenario(endtext);
-            
-            passenger.SetActive(false);
-            secondPassenger.SetActive(false);
+
+            foreach (GameObject passenger in passengers)
+            {
+                passenger.SetActive(false);
+            }
         }
     }
 }

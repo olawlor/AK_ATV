@@ -24,6 +24,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsUI;
     /* The object for the vehicles UI. This is assigned in Unity. */
     public GameObject vehiclesUI;
+    public VehicleScenario scenarios1;
+    public VehicleScenario scenarios2;
 
     /*! Update is called once per frame */
     void Update()
@@ -61,23 +63,33 @@ public class PauseMenu : MonoBehaviour
     /*! Makes the options in the options menu appear */
     public void LoadOptions()
     {
-        inOptionsMenu = true;
-        GameIsPaused = true;
-        Time.timeScale = 0f;
-        pauseMenuUI.SetActive(false);
-        optionsUI.SetActive(true);
-        vehiclesUI.SetActive(false);
+            inOptionsMenu = true;
+            GameIsPaused = true;
+            Time.timeScale = 0f;
+            pauseMenuUI.SetActive(false);
+            optionsUI.SetActive(true);
+            vehiclesUI.SetActive(false);
     }
 
-    /* Loads vehicle selection menu */
+    /* Loads vehicle selection menu
+     * If you are in a scenario, vehicle switching will be locked. 
+     */
     public void LoadVehicles()
     {
-        inVehiclesMenu = true;
-        GameIsPaused = true;
-        Time.timeScale = 0f;
-        pauseMenuUI.SetActive(false);
-        vehiclesUI.SetActive(true);
-        optionsUI.SetActive(false);
+             
+        if (!scenarios1.inScenario && !scenarios2.inScenario)
+        {
+            inVehiclesMenu = true;
+            GameIsPaused = true;
+            Time.timeScale = 0f;
+            pauseMenuUI.SetActive(false);
+            vehiclesUI.SetActive(true);
+            optionsUI.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("ERROR: Cannot switch vehicles while in a scenario!");
+        }
     }
 
     /*! Allows the user to go back to the pause menu from the options menu */
