@@ -279,7 +279,7 @@ public class VehicleProperties : MonoBehaviour
             follow_camera.transform.LookAt(look_here);
         }
 
-        if (is_flipped() && !is_VR) {
+        if (is_flipped() && !is_VR) { // <-- Probably crashing VR -Riley
             BroadcastMessage("StartRewind");
         }
         
@@ -299,7 +299,7 @@ public class VehicleProperties : MonoBehaviour
         drive=Vector3.Dot(last_velocity,transform.forward);
         mph=drive*2.237f;
         skid=Vector3.Dot(last_velocity,transform.right);
-
+        
         if (is_VR) {
             driver.transform.position = head_position.position;
             driver.transform.rotation = head_position.rotation;
