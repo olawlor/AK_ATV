@@ -18,6 +18,11 @@ public class PauseMenu : MonoBehaviour
     public bool inOptionsMenu = false;
     /* Flag for when user is in vehicles menu */
     public bool inVehiclesMenu = false;
+    /* Flag for if user is using mobile controls */
+    public bool isMobile = false;
+
+    /*!< The object for the pause menu UI. This is assigned in Unity. */
+    public GameObject mobileUI;
     /*!< The object for the pause menu UI. This is assigned in Unity. */
     public GameObject pauseMenuUI;
     /*!< The object for the options UI. This is assigned in Unity. */
@@ -48,6 +53,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        if (isMobile)
+            mobileUI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -56,6 +63,8 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        if (isMobile)
+            mobileUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
