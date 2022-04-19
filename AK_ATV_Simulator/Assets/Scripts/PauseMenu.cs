@@ -18,6 +18,8 @@ public class PauseMenu : MonoBehaviour
     public bool inOptionsMenu = false;
     /* Flag for when user is in vehicles menu */
     public bool inVehiclesMenu = false;
+    /* Flag for when user is in controls menu */
+    public bool inControlsMenu = false;
     /* Flag for if user is using mobile controls */
     public bool isMobile = false;
 
@@ -29,6 +31,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsUI;
     /* The object for the vehicles UI. This is assigned in Unity. */
     public GameObject vehiclesUI;
+    /* The objects for the controls UI. This is assigned in Unity. */
+    public GameObject controlsUI;
+
     public VehicleScenario scenarios1;
     public VehicleScenario scenarios2;
 
@@ -38,11 +43,12 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if ((GameIsPaused && !inOptionsMenu) &&
-                (GameIsPaused && !inVehiclesMenu))
+                (GameIsPaused && !inVehiclesMenu) &&
+                (GameIsPaused && !inControlsMenu))
             {
                 Resume();
             }
-            else if (!inOptionsMenu && !inVehiclesMenu)
+            else if (!inOptionsMenu && !inVehiclesMenu && !inControlsMenu)
             {
                 Pause();
             }
@@ -72,12 +78,13 @@ public class PauseMenu : MonoBehaviour
     /*! Makes the options in the options menu appear */
     public void LoadOptions()
     {
-            inOptionsMenu = true;
-            GameIsPaused = true;
-            Time.timeScale = 0f;
-            pauseMenuUI.SetActive(false);
-            optionsUI.SetActive(true);
-            vehiclesUI.SetActive(false);
+        inOptionsMenu = true;
+        GameIsPaused = true;
+        Time.timeScale = 0f;
+        pauseMenuUI.SetActive(false);
+        optionsUI.SetActive(true);
+        vehiclesUI.SetActive(false);
+        controlsUI.SetActive(false);
     }
 
     /* Loads vehicle selection menu
@@ -85,7 +92,7 @@ public class PauseMenu : MonoBehaviour
      */
     public void LoadVehicles()
     {
-             
+
         if (!scenarios1.inScenario && !scenarios2.inScenario)
         {
             inVehiclesMenu = true;
@@ -94,27 +101,43 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(false);
             vehiclesUI.SetActive(true);
             optionsUI.SetActive(false);
+            controlsUI.SetActive(false);
         }
         else
         {
             Debug.Log("ERROR: Cannot switch vehicles while in a scenario!");
         }
     }
+    /*! Loads menu for controls */
+    public void LoadControls()
+    {
+        inControlsMenu = true;
+        GameIsPaused = true;
+        Time.timeScale = 0f;
+        controlsUI.SetActive(true);
+        pauseMenuUI.SetActive(false);
+        optionsUI.SetActive(false);
+        vehiclesUI.SetActive(false);
+    }
 
     /*! Allows the user to go back to the pause menu from the options menu */
     public void BackButton()
     {
+        controlsUI.SetActive(false);
         optionsUI.SetActive(false);
         vehiclesUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         inOptionsMenu = false;
         inVehiclesMenu = false;
+        inControlsMenu = false;
     }
 
     /*! Prompts tutorial messages to be sent to phone gui */
     public void Tutorial()
     {
         optionsUI.SetActive(false);
+        vehiclesUI.SetActive(false);
+        controlsUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         //add the start tutorial cmd here
     }

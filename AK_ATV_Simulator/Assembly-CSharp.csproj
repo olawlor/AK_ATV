@@ -313,16 +313,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.37f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Valve.Newtonsoft.Json">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Assets/VR/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.37f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.37f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Common">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.37f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Assets/VR/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.37f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -670,55 +661,55 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.37f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TerrainTools">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Sysroot.Linux_x86_64">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.SysrootPackage.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TerrainTools.Editor">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/rdmaranville/Desktop/Personal/Unity Project/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/RBeet/Documents/GitHub/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
