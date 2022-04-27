@@ -13,7 +13,8 @@ public class DropdownValue : MonoBehaviour
     //This is the index value of the Dropdown
     int m_DropdownValue;
     public GameObject mainVehicle;
-    public GameObject otherVehicle;
+    public GameObject secondVehicle;
+    public GameObject thirdVehicle;
 
     void Start()
     {
@@ -42,12 +43,20 @@ public class DropdownValue : MonoBehaviour
         if (m_DropdownValue == 0)
         {
             mainVehicle.SetActive(true);
-            otherVehicle.SetActive(false);
+            secondVehicle.SetActive(false);
+            thirdVehicle.SetActive(false);
         }
         else if (m_DropdownValue == 1)
         {
             mainVehicle.SetActive(false);
-            otherVehicle.SetActive(true);
+            secondVehicle.SetActive(true);
+            thirdVehicle.SetActive(false);
+        }
+        else if (m_DropdownValue == 2)
+        {
+            mainVehicle.SetActive(false);
+            secondVehicle.SetActive(false);
+            thirdVehicle.SetActive(true);
         }
     }
 }

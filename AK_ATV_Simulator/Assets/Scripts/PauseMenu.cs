@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public VehicleScenario scenarios1;
     public VehicleScenario scenarios2;
+    public VehicleScenario scenarios3;
 
     /*! Update is called once per frame */
     void Update()
@@ -93,7 +94,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadVehicles()
     {
 
-        if (!scenarios1.inScenario && !scenarios2.inScenario)
+        if (!scenarios1.inScenario && !scenarios2.inScenario && !scenarios3.inScenario)
         {
             inVehiclesMenu = true;
             GameIsPaused = true;
