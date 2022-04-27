@@ -769,6 +769,51 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1925309864}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1259422964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3249465661244448576, guid: e80e638668b7bdfb486ba3800fec1af8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4398057513807915230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1259422966
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259422964}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 897229098302661925, guid: d858d6f15a164794e96719c1b6afae5e, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1300943494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8579476884016458117, guid: d31ca653dab6f344b88a28d813d4ce90,
@@ -2363,6 +2408,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 7.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4398057513246940178, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -74.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398057513246940178, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 78.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4398057513246940180, guid: e80e638668b7bdfb486ba3800fec1af8,
         type: 3}
       propertyPath: passenger
@@ -2408,6 +2463,11 @@ PrefabInstance:
       propertyPath: passengers.Array.data[3]
       value: 
       objectReference: {fileID: 1300943494}
+    - target: {fileID: 4398057513246940183, guid: e80e638668b7bdfb486ba3800fec1af8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4398057513424820902, guid: e80e638668b7bdfb486ba3800fec1af8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2677,7 +2737,7 @@ PrefabInstance:
     - target: {fileID: 5601482346101756974, guid: e80e638668b7bdfb486ba3800fec1af8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.82
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5601482346101756974, guid: e80e638668b7bdfb486ba3800fec1af8,
         type: 3}
