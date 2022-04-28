@@ -52,5 +52,7 @@ In Spring 2020 this was massively extended by Kim Fairbanks (graphics), Chris Mc
 
 In Spring 2021 this project was further developed by Dylan Palmieri, Tailon Russell, Greg Talotta, and Ben Talotta. Major additions include documentation with Doxygen, bugfixes, and new scenarios. Greg also worked on adding a script that can spin a chair when the ATV turns, his work is located here: https://github.com/GregTalotta/241_chair_spin
 
+In Spring 2022 this project was further developed by Nicholas Alexeev (aesthetic design), Riley Maranville (mobile port and VR), Rose Peters (vehicle physics and models, UI), and Yali Wang (scenarios logic design). Major additions include bugfixes, new 3D models, new scenarios, new minimap, new UI and menu design, and mobile deployment. Script especially for triggering audios within scenarios was added too. VR deployment has been developed but the team found many obstacles to further implement that.
+
 This work has been funded by the US Department of Transportation's Univerity Transportation Center program, Grant #DTRT13-G-UTC4O through the Pacific Northwest Regional University Transportation Center (PacTrans).  
 
