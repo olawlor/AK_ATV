@@ -14,3 +14,4 @@ Issues:
 tried several methods, including using animator controller, setting up trigger scripts, and so on, but we didn't get the expected animation effects.
 2. Due to the timeframe, bear and aircraft models are simple "static" models, which means bear couldn't move its arms or legs, and the propeller of the plane doesn't rotate. Making delicate 3D models requires time and skills but it's definitely doable.
 3. To give the users some better instructions, detailed pop-up captions on the top of the screen could be an option but might also be a distraction for the user (driver).
+4. The current minimap is using a camera overlooking the map at a relatively high postion that leads to the problem of a kind of vague view showing in the minimap. Could probably be improved somehow.
