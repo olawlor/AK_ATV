@@ -1,4 +1,4 @@
-﻿/* Used for triggering the Bear scenario animations. 
+﻿/* Used for triggering the Plane scenario animations. 
    Once the user hit the scenario trigger, 
    the corresponding animation should begin to work.
 
@@ -11,12 +11,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BearAnimationTrigger : MonoBehaviour
+public class PlaneAnimationTrigger : MonoBehaviour
 {
     public Animator animator;
 
     void OnTriggerEnter(Collider other)
     {
-        animator.Play("BEAR");
+        animator.Play("PlaneController");
     }
 }
