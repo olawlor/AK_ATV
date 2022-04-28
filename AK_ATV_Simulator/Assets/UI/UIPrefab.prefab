@@ -3286,6 +3286,7 @@ MonoBehaviour:
   controlsUI: {fileID: 6699692323214165533}
   scenarios1: {fileID: 0}
   scenarios2: {fileID: 0}
+  scenarios3: {fileID: 0}
 --- !u!1 &3185712503307411991
 GameObject:
   m_ObjectHideFlags: 0
@@ -7656,7 +7657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainVehicle: {fileID: 0}
-  otherVehicle: {fileID: 0}
+  secondVehicle: {fileID: 0}
+  thirdVehicle: {fileID: 0}
 --- !u!1 &5699589431414244269
 GameObject:
   m_ObjectHideFlags: 0
