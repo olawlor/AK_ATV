@@ -1,0 +1,5 @@
+Issues:
+1. Animations for new scenarios: Ideally, the animations should only be triggered
+after the user hit the scenario starting trigger, and only be played once. We've 
+tried several methods, including using animator controller, setting up trigger scripts,
+and so on, but we didn't get the expected animation effects.
