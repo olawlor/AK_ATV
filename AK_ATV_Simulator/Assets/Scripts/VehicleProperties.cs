@@ -128,12 +128,12 @@ public class VehicleProperties : MonoBehaviour
      onPostRender is an event function that is called after the camera renders the scene.
      Camera.onPostRender += draw_stored_lines calls the draw_stored_lines function.*/
     void OnEnable() {
-        Camera.onPostRender += draw_stored_lines;
+        //Camera.onPostRender += draw_stored_lines;
     }
 
     /*! Called when the object this script is attached to is disabled */
     void OnDisable() {
-        Camera.onPostRender -= draw_stored_lines;
+        //Camera.onPostRender -= draw_stored_lines;
     }
 
     /*! Calculates the tilt angle of the atv, in degrees relative to world up */
