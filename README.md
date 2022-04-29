@@ -37,6 +37,15 @@ They're from the Unity Asset store:
 - Rocks and Boulders 2, by K4
         https://assetstore.unity.com/packages/3d/props/exterior/rock-and-boulders-2-6947
 
+- US Road Signs Free, by Covalence Studios
+        https://assetstore.unity.com/packages/3d/props/exterior/us-road-signs-free-164941
+        
+- Black Bear 3D Model, by umar6419
+        https://free3d.com/3d-model/black-bear-87483.html
+        
+- Planes & Choppers - PolyPack, by Alstra Infinite
+        https://assetstore.unity.com/packages/3d/vehicles/air/planes-choppers-polypack-194946
+        
 - Grass Flowers Pack Free, by ALP8310
         https://assetstore.unity.com/packages/2d/textures-materials/grass-flowers-pack-free-138810
 
