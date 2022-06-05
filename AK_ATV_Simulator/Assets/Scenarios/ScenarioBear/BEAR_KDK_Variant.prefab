@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8700617353114198275, guid: d858d6f15a164794e96719c1b6afae5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d858d6f15a164794e96719c1b6afae5e,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +70,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d858d6f15a164794e96719c1b6afae5e,
         type: 3}
       propertyPath: m_Name
-      value: BEAR_KDK
+      value: BEAR_KDK_Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736051808862866457, guid: d858d6f15a164794e96719c1b6afae5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d858d6f15a164794e96719c1b6afae5e, type: 3}

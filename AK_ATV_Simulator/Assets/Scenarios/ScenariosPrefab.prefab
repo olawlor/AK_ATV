@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926352420054367889}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: -7.6, y: 3.09, z: 21.3}
   m_LocalScale: {x: 0.25, y: 1, z: 0.25}
   m_Children: []
   m_Father: {fileID: 5453728123748305256}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
 --- !u!33 &6561721224318896694
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926352420054367889}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1457895867955726089, guid: cc208b01f5d147747b9636893ac449fd, type: 3}
 --- !u!23 &904397453120606250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseObject: {fileID: 4883532078384365914}
   speed: 5
-  height: 0.1
+  height: 2
 --- !u!114 &1843444652915326205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,22 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  m_Delegates: []
 --- !u!1 &1130035562296672936
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130035562296672936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.7193, y: 66.3212, z: 136.51651}
+  m_LocalPosition: {x: 51.86, y: 89.92, z: 191.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6565994093095084510}
@@ -169,8 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e20d6b22e358346809141ed35fdae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTrigger: {fileID: 4883532078384365914}
-  endtext: You've successfully avoided the landing helicopter!
+  startTrigger: {fileID: 4824102510461062973}
+  endtext: You've successfully avoided the landing aircraft! Drive to the white arrow
+    ahead.
 --- !u!65 &2244252244695452831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -210,13 +196,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697937534009492449}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 1, z: 0.25}
   m_Children: []
   m_Father: {fileID: 2369797855559180082}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
 --- !u!33 &8751317198249838372
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -224,7 +210,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697937534009492449}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1457895867955726089, guid: cc208b01f5d147747b9636893ac449fd, type: 3}
 --- !u!23 &3857531629373461482
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -243,7 +229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ccc111fcb75d73392b7d9f581223676b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -278,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseObject: {fileID: 1130035562296672936}
   speed: 5
-  height: 0.1
+  height: 2
 --- !u!1 &2231197050416744284
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,13 +325,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2558564806231600484}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.05, y: -7.24, z: 0}
+  m_LocalRotation: {x: 0, y: 0.76604444, z: 0, w: 0.64278764}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 1, z: 0.25}
   m_Children: []
   m_Father: {fileID: 5184648287817780940}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
 --- !u!33 &6498729792172465535
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -353,7 +339,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2558564806231600484}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1457895867955726089, guid: cc208b01f5d147747b9636893ac449fd, type: 3}
 --- !u!23 &8092133449872739856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -407,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseObject: {fileID: 4824102510461062973}
   speed: 5
-  height: 0.1
+  height: 2
 --- !u!114 &1796188136574517908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,12 +411,12 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 4398057513807915232}
+          m_MethodName: SetTrigger
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -498,7 +484,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 88709eff3cad13847befd64866efb644, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1617,7 +1603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513104603188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.569298, y: 65.021194, z: 236.3155}
+  m_LocalPosition: {x: 83.71, y: 72.86, z: 157.77}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057514732981387}
@@ -1651,7 +1637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057513203686625}
   resetRace: {fileID: 4398057514342646021}
-  endtext: 'Well done! Your final time was: '
+  endtext: 'Well done! Before you take the right turn to leave this loop, your final
+    time was: '
   timer: {fileID: 0}
 --- !u!1 &4398057513133083070
 GameObject:
@@ -2073,7 +2060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513203686625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 192.28, y: 68.38, z: 189.59}
+  m_LocalPosition: {x: 137.28, y: 72.83, z: 217.2}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057514400631816}
@@ -2130,7 +2117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513224209170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 35.6, y: 1.3, z: 7.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4398057513424820902}
@@ -2166,7 +2153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513246940183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.68, y: 80.64, z: 137.52}
+  m_LocalPosition: {x: -74.5, y: 78.2, z: 137.52}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057513073674437}
@@ -2200,7 +2187,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057513424820905}
   endtext: You have safely brought your friends to the mountain.  Nice!
-  passengers: []
+  passengers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mountainPassTrigger: {fileID: 4398057513195536013}
 --- !u!1 &4398057513250136722
 GameObject:
@@ -2228,7 +2219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513250136722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 108.11, y: 62.91, z: 82.7}
+  m_LocalPosition: {x: 122.71, y: 62.91, z: 86.43}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057514061405452}
@@ -2448,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057514621149429}
-  scenario: Park the ATV in the truckbed
+  scenario: Park the ATV in the truckbed and then drive off.
 --- !u!1 &4398057513424820905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513424820905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.49, y: 58.38, z: 31.12}
+  m_LocalPosition: {x: -59.41, y: 58.38, z: 31.08}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057513175471579}
@@ -2495,10 +2486,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057513246940183}
-  scenario: Take your two friends up the mountain.  Don't let your friend in the
-    back fall out!
-  passengers: []
-  secondPassengers: []
+  scenario: Take your two friends up the mountain to the red arrow.  Don't let your
+    friend in the back fall out!
+  passengers:
+  - {fileID: 0}
+  - {fileID: 0}
+  secondPassengers:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!65 &4398057513424820900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2633,7 +2628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513516393838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 162.8, y: 60.98, z: 97.2}
+  m_LocalPosition: {x: 179.3, y: 68.5, z: 137.2}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057514391017537}
@@ -2692,7 +2687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513567308062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.6, y: 70.9, z: 150.6}
+  m_LocalPosition: {x: 89.09, y: 71.92, z: 150.6}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057514259417090}
@@ -3409,7 +3404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513785389848}
   m_LocalRotation: {x: 0.036299493, y: 0.084080435, z: -0.028561518, w: 0.9953879}
-  m_LocalPosition: {x: -51.29599, y: 56.92291, z: 0.97343063}
+  m_LocalPosition: {x: -59.8, y: 58.5, z: 31.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4398057513224209171}
@@ -3599,7 +3594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057514480729314}
-  scenario: Jump the house?!  Looks fun!
+  scenario: You found a hidden challenge! Jump the house?! Looks fun!
 --- !u!1 &4398057513920076951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,7 +3792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057513977887675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.45, z: -0.87}
   m_LocalScale: {x: 0.059965, y: 0.23986, z: 0.059965}
   m_Children: []
   m_Father: {fileID: 4398057514038842508}
@@ -4046,7 +4041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057514038842510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.64, y: 57.191193, z: 15.15}
+  m_LocalPosition: {x: 72.74, y: 54.29, z: 15.15}
   m_LocalScale: {x: 6, y: 5, z: 5}
   m_Children:
   - {fileID: 4398057513977887672}
@@ -4065,7 +4060,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.5, y: 0, z: -0.5}
 --- !u!114 &4398057514038842509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,7 +4074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057514740690452}
-  scenario: Drive to the lake
+  scenario: Drive to the lake and turn around.
 --- !u!1 &4398057514061405455
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,7 +5138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398057514471993784}
   m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: -51.46499, y: 57.625908, z: 0.46}
+  m_LocalPosition: {x: -59.81, y: 59.099, z: 30.243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4398057513224209171}
@@ -5548,8 +5543,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13881636, y: 0.13988972, z: 0.3503514}
-  m_Center: {x: -0.00714523, y: -0.18682571, z: -0.019919598}
+  m_Size: {x: 0.20764384, y: 0.2349764, z: 0.3503514}
+  m_Center: {x: 0.0272685, y: -0.13928238, z: -0.019919597}
 --- !u!114 &4398057514621149426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5563,7 +5558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057513376397107}
-  endtext: You've safely parked in the truck. Well done!
+  endtext: You've safely parked in the truck. Well done! Now go to the next white
+    arrow on the main road ahead.
 --- !u!1 &4398057514638256627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6072,7 +6068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057514038842510}
-  endtext: You've arrived at the lake.  Nice driving!
+  endtext: You've arrived at the lake. Nice driving! Make a U turn, then turn right
+    to enter the loop.
 --- !u!1 &4398057514780382349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6178,6 +6175,8 @@ GameObject:
   - component: {fileID: 5184648287817780940}
   - component: {fileID: 3400034864442689678}
   - component: {fileID: 3761928392320414868}
+  - component: {fileID: 357267183}
+  - component: {fileID: 357267182}
   m_Layer: 0
   m_Name: scenario_start_plane
   m_TagString: Untagged
@@ -6193,7 +6192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4824102510461062973}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 181.2193, y: 72.58119, z: 144.3155}
+  m_LocalPosition: {x: 195.93, y: 90.75, z: 167.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3893062063229353809}
@@ -6211,7 +6210,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3761928392320414868
 MonoBehaviour:
@@ -6226,7 +6225,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 1130035562296672936}
-  scenario: Emergency landing of a helicopter! Try to move out of its way!
+  scenario: Emergency landing of a training aircraft! Drive to the red arrow in the
+    corner directly to avoid the main road.
+--- !u!111 &357267183
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824102510461062973}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a83e9d3701004864aacc13712009fe16, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &357267182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824102510461062973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841c33c4b132af74c8fc132eee9fab8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playSound: {fileID: 4991911193913533240}
 --- !u!1 &4872590058566277793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,7 +6298,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 21f10b529e998d74aa446198523f494a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6365,6 +6393,8 @@ GameObject:
   - component: {fileID: 5453728123748305256}
   - component: {fileID: 3526162331261316899}
   - component: {fileID: 31349482888143196}
+  - component: {fileID: 451251564}
+  - component: {fileID: 451251565}
   m_Layer: 0
   m_Name: scenario_start_bear
   m_TagString: Untagged
@@ -6380,7 +6410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4883532078384365914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -177.4607, y: 55.121193, z: 60.4655}
+  m_LocalPosition: {x: -178.23, y: 56.91, z: 61.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5601482346101756974}
@@ -6398,8 +6428,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &31349482888143196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,7 +6443,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 5519451109702631062}
-  scenario: You run into a bear! Try to avoid from hitting it!
+  scenario: You run into a bear! Drive away quickly and try to avoid from hitting
+    this poor fellow.
+--- !u!111 &451251564
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883532078384365914}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2119581f05067ad4bad0fb9856b4e588, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &451251565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883532078384365914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841c33c4b132af74c8fc132eee9fab8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playSound: {fileID: 4912474813825217446}
 --- !u!1 &5519451109702631062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6440,7 +6499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5519451109702631062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.6107, y: 57.901196, z: 40.5255}
+  m_LocalPosition: {x: -68.21, y: 58.36, z: 32.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3379436908530465348}
@@ -6460,7 +6519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4883532078384365914}
-  endtext: You've successfully escaped from the bear!
+  endtext: You've successfully escaped from the bear! You're both safe now!
 --- !u!65 &7894632753765415078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6472,8 +6531,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &7388240620861210744
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,7 +6573,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7388240620861210744}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1457895867955726089, guid: cc208b01f5d147747b9636893ac449fd, type: 3}
 --- !u!23 &4702180168472208069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6533,7 +6592,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ccc111fcb75d73392b7d9f581223676b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6568,7 +6627,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseObject: {fileID: 5519451109702631062}
   speed: 5
-  height: 0.1
+  height: 2
+--- !u!95 &4398057513807915232
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717505864952061701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6c52318836250f44b0999c0d63f2e3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8898345543646210315
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,7 +6671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8898345543646210315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6, y: -24.2, z: 11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5184648287817780940}
@@ -6622,12 +6700,12 @@ PrefabInstance:
     - target: {fileID: 3208134762239642623, guid: 3b7be13152b16094785a158960e470e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -167.2
+      value: -185.25
       objectReference: {fileID: 0}
     - target: {fileID: 3208134762239642623, guid: 3b7be13152b16094785a158960e470e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.72
+      value: 55.13
       objectReference: {fileID: 0}
     - target: {fileID: 3208134762239642623, guid: 3b7be13152b16094785a158960e470e5,
         type: 3}
@@ -6669,17 +6747,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5894047268518772959, guid: 3b7be13152b16094785a158960e470e5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7be13152b16094785a158960e470e5, type: 3}
---- !u!4 &2394431991512307377 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3208134762239642623, guid: 3b7be13152b16094785a158960e470e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 990561726465072462}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3058343928418552843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2868306141049262405, guid: 3b7be13152b16094785a158960e470e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 990561726465072462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2394431991512307377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3208134762239642623, guid: 3b7be13152b16094785a158960e470e5,
     type: 3}
   m_PrefabInstance: {fileID: 990561726465072462}
   m_PrefabAsset: {fileID: 0}
@@ -6787,28 +6870,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 342.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 117.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 213.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99627775
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
@@ -6818,7 +6916,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0862014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
@@ -6833,7 +6931,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 9.89
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a10ea97d1e7447a42a14b05fff673229,
         type: 3}
@@ -6845,6 +6943,12 @@ PrefabInstance:
 --- !u!4 &8336477134590199231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
+    type: 3}
+  m_PrefabInstance: {fileID: 8375469026970116692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8717505864952061701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a10ea97d1e7447a42a14b05fff673229,
     type: 3}
   m_PrefabInstance: {fileID: 8375469026970116692}
   m_PrefabAsset: {fileID: 0}
