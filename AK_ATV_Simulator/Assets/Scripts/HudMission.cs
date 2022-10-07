@@ -27,10 +27,6 @@ public class HudMission : MonoBehaviour
 
         VehicleScenario.UpdateMissionGoal("This phone will provide you with everything you need to know.");
         yield return new WaitForSecondsRealtime(5); 
-        VehicleScenario.UpdateMissionGoal("The yellow triangle at the top of the compass points the way you are currently heading.");
-        yield return new WaitForSecondsRealtime(5);
-        VehicleScenario.UpdateMissionGoal("when there is a pink line on the compass it will be pointing toward the objective");
-        yield return new WaitForSecondsRealtime(1);
     }
     
     private string last="";
