@@ -90,19 +90,21 @@ public class VehicleProperties : MonoBehaviour
 
     /*!< force shader (reads vertex colors). Part of the debugging for force visualization */
     public Material force_material;
-    /*!< The number of forces, the vehicle and the wheels */
-    private const int nforces=1+4;
-    /*!< smoother bouncing. Part of the debugging for force visualization */
-    private const int nforce_copies=5; 
-    private int force_index=0;
+    /*!< Maximum number of forces: the vehicle and the wheels */
+    private const int nforces=1+8;
+    
+    /*!< Current force being added */
+    private int force_index=0; 
+    
     /*!< drawn color. Part of the debugging for force visualization */
-    private Color[]   force_color=new Color[nforces*nforce_copies];
+    private Color[]   force_color=new Color[nforces];
     /*!< start location in world space (meters). Part of the debugging for force visualization */
-    private Vector3[] force_start=new Vector3[nforces*nforce_copies];
+    private Vector3[] force_start=new Vector3[nforces];
     /*< actual force vector (Newtons). Part of the debugging for force visualization */
-    private Vector3[] force_vec=new Vector3[nforces*nforce_copies];
+    private Vector3[] force_vec=new Vector3[nforces];
     /*!< force (N) to onscreen meters. Part of the debugging for force visualization */
     public float force_scaling=1.0f/1000.0f; 
+    public float force_filter=0.10f; // fraction of new force to blend in per FixedUpdate
     
     /*! For debugging terrain following */
     public float vehicle_height;
@@ -157,32 +159,6 @@ public class VehicleProperties : MonoBehaviour
     public Rigidbody get_rb() {
         return rb;
     }
-
-    // Average across the nforce_copies of idx in this array
-    /*
-    T force_average<T>(T[] force_arr,int idx) {
-        T ret=new T(0.0f,0.0f,0.0f);
-        for (int i=0;i<nforces*nforce_copies;i+=nforces)
-            ret = ret + force_arr[i+idx];
-        return ret*(1.0f/nforce_copies);
-    }
-    */
-
-    /*! Determines the average color across the nforce_copies of idx in this array. */
-    Color force_average_color(Color[] force_arr,int idx) {
-        Color ret=new Color(0.0f,0.0f,0.0f);
-        for (int i=0;i<nforces*nforce_copies;i+=nforces)
-            ret = ret + force_arr[i+idx];
-        return ret*(1.0f/nforce_copies);
-    }
-
-    /*! Determines the average vector across the nforce_copies of idx in this array. */
-    Vector3 force_average_vec3(Vector3[] force_arr,int idx) {
-        Vector3 ret=new Vector3(0.0f,0.0f,0.0f);
-        for (int i=0;i<nforces*nforce_copies;i+=nforces)
-            ret = ret + force_arr[i+idx];
-        return ret*(1.0f/nforce_copies);
-    }
     
     /*! Draws the lines that were stored in FixedUpdate.
      This gets called by the camera's OnPostRender callback. */
@@ -197,9 +173,9 @@ public class VehicleProperties : MonoBehaviour
         
         /* stored forces */
         for (int i=0;i<nforces;i++) {
-            GL.Color(force_average_color(force_color,i));
-            Vector3 start=force_average_vec3(force_start,i);
-            Vector3 vec=force_average_vec3(force_vec,i);
+            GL.Color(force_color[i]);
+            Vector3 start=force_start[i];
+            Vector3 vec=force_vec[i];
             GL.Vertex(start);
             GL.Vertex(start+vec*force_scaling);
         }
@@ -238,10 +214,11 @@ public class VehicleProperties : MonoBehaviour
     /*! Draw a force vector onscreen, during later draw_stored_lines call. */
     public void draw_force(Color c,Vector3 start,Vector3 force)
     { 
-        force_index++; if (force_index>=nforces*nforce_copies) force_index=0;
-        force_color[force_index]=c;
-        force_start[force_index]=start;
-        force_vec[force_index]=force;
+        force_index++; if (force_index>=nforces) force_index=0;
+        int i=force_index;
+        force_color[i]=c;
+        force_start[i]=start;
+        complementary_filter(force_filter,ref force_vec[i],force);
     }
     
     /*! Blend slow with fast, by del */
@@ -266,6 +243,7 @@ public class VehicleProperties : MonoBehaviour
     // FixedUpdate is called once per physicsframe
     void FixedUpdate()
     {
+        force_index=0;
         //Debug.Log("FixedUpdate");
         if (follow_camera) {
             complementary_filter(is_VR?0.3f:0.06f,ref camera_position,next_camera());
