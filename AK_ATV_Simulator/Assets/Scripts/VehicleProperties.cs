@@ -51,7 +51,9 @@ public class VehicleProperties : MonoBehaviour
     /*!< scalar velocity, in miles/hour. Extracted physical motion of the vehicle */
     public float mph; 
 
+    /*!< Moves the camera around behind us. */
     public GameObject follow_camera;
+    
     /*!< smoothed camera position. */
     public Vector3 camera_position; 
     public Vector3 next_camera() {
@@ -91,7 +93,7 @@ public class VehicleProperties : MonoBehaviour
     /*!< The number of forces, the vehicle and the wheels */
     private const int nforces=1+4;
     /*!< smoother bouncing. Part of the debugging for force visualization */
-    private const int nforce_copies=10; 
+    private const int nforce_copies=5; 
     private int force_index=0;
     /*!< drawn color. Part of the debugging for force visualization */
     private Color[]   force_color=new Color[nforces*nforce_copies];
@@ -125,15 +127,14 @@ public class VehicleProperties : MonoBehaviour
     
     /*! Called when the object this script is attached to is enabled.
      Need to register our callback with onPostRender.
-     onPostRender is an event function that is called after the camera renders the scene.
-     Camera.onPostRender += draw_stored_lines calls the draw_stored_lines function.*/
+     onPostRender is an event function that is called after the camera renders the scene.*/
     void OnEnable() {
-        //Camera.onPostRender += draw_stored_lines;
+        Camera.onPostRender += draw_stored_lines;
     }
 
     /*! Called when the object this script is attached to is disabled */
     void OnDisable() {
-        //Camera.onPostRender -= draw_stored_lines;
+        Camera.onPostRender -= draw_stored_lines;
     }
 
     /*! Calculates the tilt angle of the atv, in degrees relative to world up */
