@@ -169,15 +169,41 @@ public class VehicleProperties : MonoBehaviour
         //GL.LoadProjectionMatrix(cam.projectionMatrix);
         //GL.LoadIdentity();
         //GL.MultMatrix(cam.transform.worldToLocalMatrix);
-        GL.Begin(GL.LINES);
+        //GL.Begin(GL.LINES);
+        GL.Begin(GL.TRIANGLE_STRIP);
+        
+        Vector3 up=new Vector3(0.01f,1.0f,0.02f);
+        float size=0.02f; // diameter of force vector, in meters
         
         /* stored forces */
         for (int i=0;i<nforces;i++) {
+            //force_color[i].a=0.5f; //<- make forces transparent
             GL.Color(force_color[i]);
             Vector3 start=force_start[i];
             Vector3 vec=force_vec[i];
+            Vector3 end=start+vec*force_scaling;
+            Vector3 dX=size*Vector3.Normalize(Vector3.Cross(vec,up));
+            Vector3 dY=size*Vector3.Normalize(Vector3.Cross(vec,dX));
+            
             GL.Vertex(start);
-            GL.Vertex(start+vec*force_scaling);
+            GL.Vertex(start);
+            GL.Vertex(start+dX); // endcap
+            GL.Vertex(start+dX+dY);
+            GL.Vertex(start+dY);
+            GL.Vertex(end);
+            
+            GL.Vertex(start+dX);
+            GL.Vertex(end+dX);
+            
+            GL.Vertex(start+dX+dY);
+            GL.Vertex(end+dX+dY);
+            
+            GL.Vertex(start+dY);
+            GL.Vertex(end+dY);
+            
+            GL.Vertex(start);
+            GL.Vertex(end);
+            GL.Vertex(end);
         }
         
         
