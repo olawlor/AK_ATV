@@ -280,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &553959556844932295
 Transform:
   m_ObjectHideFlags: 0
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057513376397107}
-  endtext: I said in the truck, not jump the truck!
+  endtext: I said in the truck, not jump over the truck!
 --- !u!1 &4398057513175471582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057514621149429}
-  scenario: Park the ATV in the truckbed and then drive off.
+  scenario: Park the ATV in the truckbed.
 --- !u!1 &4398057513424820905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,8 +2486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057513246940183}
-  scenario: Take your two friends up the mountain to the red arrow.  Don't let your
-    friend in the back fall out!
+  scenario: Take your friends up the mountain.  Don't let your friend in the back
+    fall out!
   passengers:
   - {fileID: 0}
   - {fileID: 0}
@@ -3363,7 +3363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4398057513781705725
 Transform:
   m_ObjectHideFlags: 0
@@ -4074,7 +4074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endTrigger: {fileID: 4398057514740690452}
-  scenario: Drive to the lake and turn around.
+  scenario: Drive to the lake!
 --- !u!1 &4398057514061405455
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,8 +5558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057513376397107}
-  endtext: You've safely parked in the truck. Well done! Now go to the next white
-    arrow on the main road ahead.
+  endtext: You've safely parked in the truck. Well done!
 --- !u!1 &4398057514638256627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6068,8 +6067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTrigger: {fileID: 4398057514038842510}
-  endtext: You've arrived at the lake. Nice driving! Make a U turn, then turn right
-    to enter the loop.
+  endtext: You've arrived at the lake. Nice driving!
 --- !u!1 &4398057514780382349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,7 +6660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2045860490198461193
 Transform:
   m_ObjectHideFlags: 0
@@ -6754,15 +6752,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7be13152b16094785a158960e470e5, type: 3}
---- !u!1 &3058343928418552843 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2868306141049262405, guid: 3b7be13152b16094785a158960e470e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 990561726465072462}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2394431991512307377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3208134762239642623, guid: 3b7be13152b16094785a158960e470e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 990561726465072462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3058343928418552843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2868306141049262405, guid: 3b7be13152b16094785a158960e470e5,
     type: 3}
   m_PrefabInstance: {fileID: 990561726465072462}
   m_PrefabAsset: {fileID: 0}
@@ -6940,15 +6938,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a10ea97d1e7447a42a14b05fff673229, type: 3}
---- !u!4 &8336477134590199231 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
-    type: 3}
-  m_PrefabInstance: {fileID: 8375469026970116692}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8717505864952061701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a10ea97d1e7447a42a14b05fff673229,
+    type: 3}
+  m_PrefabInstance: {fileID: 8375469026970116692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8336477134590199231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a10ea97d1e7447a42a14b05fff673229,
     type: 3}
   m_PrefabInstance: {fileID: 8375469026970116692}
   m_PrefabAsset: {fileID: 0}

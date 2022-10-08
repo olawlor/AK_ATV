@@ -48,10 +48,8 @@ public class VehicleScenario : MonoBehaviour
     {
         state = scenario_state.STARTING; //<- bring up starting scenario menu
         inScenario = true;
-        scenarioMenu.SetActive(true);
-        Time.timeScale = 0f;
-        scenarioAnnounce.text = "New Scenario";
-        scenarioDesc.text = msg;
+        //PauseScenarioMenu("New Scenario",msg);
+        UpdateScenario();
 
         // No other mission is active:
         SetStartsActive(false);
@@ -61,14 +59,21 @@ public class VehicleScenario : MonoBehaviour
     private void EndScenarioMenu(string msg)
     {
         state = scenario_state.ENDING;
-        scenarioMenu.SetActive(true);
-        Time.timeScale = 0f;
-        scenarioAnnounce.text = "Scenario Complete";
-        scenarioDesc.text = msg;
         inScenario = false;
+        //PauseScenarioMenu("Scenario Complete",msg);
+        UpdateScenario();
 
         // Any (other) mission can be active now:
         SetStartsActive(true);
+    }
+    
+    // Bring up annoying modal scenario menu
+    private void PauseScenarioMenu(string state,string msg)
+    {
+        scenarioMenu.SetActive(true);
+        Time.timeScale = 0f;
+        scenarioAnnounce.text = state;
+        scenarioDesc.text = msg;
     }
 
     // This is called by Canvas -> ScenarioButton -> ResumeButton to exit a menu.
