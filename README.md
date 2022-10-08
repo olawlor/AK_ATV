@@ -5,7 +5,7 @@ This is a Unity application that simulates an All-Terrain Vehicle (ATV), and is 
 
 ## WebGL link:
 The WebGL version is playable at:
-   https://scifi6546.github.io/ATV_GL_EXPORT/
+   https://olawlor.github.io/AK_ATV/
 
 ### WebGL Keys:
 - p: Pause
