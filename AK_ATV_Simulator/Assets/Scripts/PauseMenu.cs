@@ -160,6 +160,7 @@ public class PauseMenu : MonoBehaviour
     /*! Allows users to change the graphics quality settings */
     public void SetQuality(int qualityIndex)
     {
+        Debug.Log("Setting graphics quality level to "+qualityIndex);
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 

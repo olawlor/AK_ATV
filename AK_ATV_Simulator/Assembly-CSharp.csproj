@@ -708,6 +708,9 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>/m/code/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Toolchain.Linux-x86_64">
+ <HintPath>/m/code/AK_ATV/AK_ATV_Simulator/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
